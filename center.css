@@ -1,1783 +1,949 @@
+/* Colors						*/
+/* If you update this, please update it at the bottom as well */
+/* Dark Blue: 002448		*/
+/* Medium Blue: 1B9DC6 */
+/* Pale Blue: E8EFF4		*/
+/* White Blue: EAF6FA		*/
+/* Red Orange: B83004	*/
 
-/* Hire Winter 2014 */
 
-/* --- Typeface Guide: ---*/
-/* --- Helvetica Neue 35 - (Thin) This is a non-condensed (wider width) thin weight version. --- */
-/* --- Helvetica Neue 45 - (Light) This is a non-compressed (wider width) light weight version. --- */
-/* --- Helvetica Neue 47 - (Light Condensed) This is a lighter weight, compressed version. --- */
-/* --- Helvetica Neue 55 - (Roman) This is the standard weight, non-compressed . --- */
-/* --- Helvetica Neue 57 - (Condensed) This is a standard weight, compressed width. --- */
-/* --- Helvetica Neue 65 - (Medium) This is the medium weight, non-compressed version. --- */
-/* --- Helvetica Neue 67 - (Medium Condensed) This is the medium weight, compressed version. --- */
-/* --- Helvetica Neue 77 - (Bold Condensed) This is a heavier weight, compressed version. --- */
-
-/* --------------- TAGS ----------------- */
-
-
-/* --- RESETS ALL HTML tags for better consistency across browsers --- */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-weight: normal;
-    /*font: inherit;*/
-    text-decoration: none;
-    vertical-align: baseline;
-}
-
-/* FRED */
-/* --- Re-establishes some HTML tags after the RESET above ---*/
-
-U {
-    text-decoration: underline;
-}
-
-IL, UL {
-    list-style-type: none;
-}
-
-H1, H2 {
-    font-family: 'Atrament Medium';
-    font-size: 32px;
-    text-transform: uppercase;
-}
-
-H2 {
-    color: #808080;
-}
-
-/* --- Prevents page from shifting when navigating from a page with a scrollbar to a page w/o a scrollbar --- */
-HTML {
-    overflow-y: scroll;
-    background-repeat: repeat;
-}
-
-/*--- Establishes the default typeface, size and background color for the entire solution ---*/
-
-BODY {
-    background-image: url(../Images/texture_grain_200x200_v2.png);
-    color: #404040;
-    font-family: arial,sans-serif;
-    font-size: 14px;
-    min-width: 900px;
-}
-
-/* ----- DEFAULT COLOR OF HYPERLINKS ----- */
-
-A, a:link, a:visited, a:active {
-    color: #BF4B00;
-}
-
-
-/* ---- SEARCH TEXTBOX - TYPICALLY LOCATED ABOVE DATAGRIDS ---- */
-
-/* ---- SEARCH BOX AREA ABOVE THE DATA GRIDS  ---- */
-div.quickSearch {
-    padding: 10px;
-}
-
-    /* ---- SEARCH TEXTBOX ---- */
-
-    div.quickSearch input {
-        height: 30px;
-        width: 300px;
-    }
-
-    /* ---- SEARCH ICON IMMEDIATLY FOLLOWING THE SEARCH BOX ---- */
-
-    div.quickSearch .qsHelpText {
-        background-color: #414141;
-        background-image: url(../Images/ic-searchg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 65px;
-        height: 40px;
-        display: inline-block;
-        vertical-align: bottom;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-
-.badge {
-    font-family: 'Helvetica Neue 57';
-    font-size: 10px;
-    line-height: 18px;
-    text-align: center;
-    background-color: #808080;
-    color: #FFFFFF;
-    border: 2px solid #D2D2D2;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    position: absolute;
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    margin: -5px 0 0 2px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-/* ******************* */
-/* ---- Dynalists ---- */
-/* ******************* */
-
-
-
-/* ---- DYNALIST TABLE OF DATA --- */
-
-
-div.DynaListGeneric TABLE {
-    border-collapse: collapse;
-    border: 10px solid white;
-    background-color: #ffffff;
-    font-family: arial,sans-serif;
-    font-size: 12px;
-    text-align: left;
-}
-
-    /* ---- DYNALIST TABLE OF DATA - CELL --- */
-
-    div.DynaListGeneric TABLE TD, div.DynaListGeneric TABLE TH {
-        border-top: 1px solid #E0E0E0;
-        border-bottom: 1px solid #E0E0E0;
-        padding: 7px 5px 7px 5px; /* Provides just the right amount of cell padding within dynalists. */
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden; /* Ensures text in a cell doesn't wrap to the next line but instead displays a series of dots (ellipsis) at the width limit. */
-        vertical-align: middle; /* Centers the cell contents vertically within the cell. */
-    }
-
-    div.DynaListGeneric table tbody tr.thead td a {
-        color: #000000;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    div.DynaListGeneric TABLE TBODY TR {
-        background-color: #FFFFFF; /* Removed the TD from this so it wouldn't take prescedence over the TR row color coding in the Application Manager in R&H - Eric 2/2014 */
-    }
-
-        /* ---- COLUMN HEADERS / COLUMN TITLES ---- */
-
-        div.DynaListGeneric TABLE THEAD TR TD, div.DynaListGeneric table tbody tr.thead td, div.DynaListGeneric table thead tr th, div.DynaListGeneric table .thead {
-            vertical-align: bottom;
-        }
-
-
-/* ---- BUTTON WITHIN A DATA GRID/DYNALIST ---- */
-
-div.DynaListGeneric td INPUT[type=button], div.DynaListGeneric td button, div.DynaListGeneric td a.action:link, div.DynaListGeneric td a.action:visited {
-    background-color: #585858;
-    color: #FFFFFF;
-    font-family: arial,sans-serif;
-    font-size: 11px;
-    margin: 0px;
-    padding: 4px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    vertical-align: middle;
-}
-
-/* ---- BUTTON WITHIN A DATA GRID/DYNALIST FOR DISABLED ROWS - MUST BE CLICKABLE YET MUST LOOK DISABLED---- */
-
-div.DynaListGeneric td a.action-disabled {
-    background-color: #E6E6E6;
-    border-radius: 2px;
-    color: #808080;
-    font-size: 12px;
-    margin: 0px;
-    padding: 4px;
-    text-transform: uppercase;
-    vertical-align: middle;
-}
-
-
-/* ---- BUTTON WITHIN A DATA GRID/DYNALIST:HOVER ---- */
-
-div.DynaListGeneric td button:hover, div.DynaListGeneric td button:hover, div.DynaListGeneric td a.action:link:hover, div.DynaListGeneric td a.action:visited:hover {
-    background-color: #A9A9A9;
-}
-
-/* ---- STYLE USED TO GIVE A HEAVIER PROMINENCE TO PRIMARY COLUMNS WITHIN A DYNALIST LIKE FIRST NAME AND LAST NAME. THIS STYLE CAN BE FOUND IN SEVERAL XSLT FILES. */
-
-td.dynaaccent {
-    font-weight: bold;
-    font-size: 13px;
-    padding-left: 20px;
-}
-
-
-/* ---- FOR USE ON CELLS THAT NEED TO WRAP ---- */
-div.DynaListGeneric TABLE TR TD.cellwrap {
-    text-align: left;
-    white-space: normal;
-    max-height: 100px;
-    overflow: auto;
-}
-
-
-/* ******************* */
-/* ---- FORM STYLE 00 ---- */
-/* ---- Default Styles ---- */
-/* ******************* */
-
-/* FORM00*/
-
-/* SUB-SECTIONS WITHINT ADD/EDIT FORMS */
-
-fieldset {
-    padding: 5px 0px 10px 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #E7E7E7;
-    /* margin: 9px 0; padding: 6px 9px; border: 0px; */
-}
-
-    /* USED FOR TITLES OF SUB-SECTIONS WITHIN ADD/EDIT FORMS */
-
-    fieldset h2 {
-        color: #A8A8A8;
-        font-family: 'Atrament Medium';
-        font-size: 32px;
-        height: auto;
-        margin-top: 10px;
-        text-transform: uppercase;
-    }
-   
-/* USED TO ADD PADDING AROUND CHECKBOXE SO THEY ARE THE SAME HEIGHT AS OTHER FORM CONTROLS    */
-fieldset INPUT[type=checkbox] {
-    margin: 8px 5px 8px 10px;
-}
-
-
-/* USED TO FLOAT BUTTONS TO THE RIGHT OF THE SCREEN */
-
-fieldset.buttons {
-    text-align: right;
-    background-color: Transparent;
-}
-
-fieldset.buttons-left {
-    text-align: left;
-    background-color: Transparent;
-    margin-left: -15px;
-}
-
-/* test */
-span.fieldset {
-    background-color: white;
-    display: block;
-    clear: both;
-}
-/* Added css class for OTSI DEV79*/
-.InterviewDiv {
-    width: auto;
-}
-/* /test */
-
-legend {
-    border: 1px solid #EFEFEF;
-    color: #77C043;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-/* ---- TEXT LINKS - ESPECIALLY ACTION ITEMS WITHIN A DATA GRID ---- */
-
-
-/* ---- DEFAULT BUTTONS ---- */
-input[type=button], input[type=submit], input[type="submit"].add, input[type="button"].add, .action, a.action, button, a.add, .button, a:link.button, a:visited.button {
-    background-color: #404040;
-    border-radius: 3px;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-family: 'Helvetica Neue 55'; /*-- Chrome establishes a default font for INPUT[type=button] in forms.css therefor this is needed to override that. Grrr. ---*/
-    font-size: 14px;
-    margin: 3px 3px 3px 3px;
-    padding: 5px 10px 5px 10px;
-    text-transform: uppercase;
-}
-
-
-
-    /* ---- DEFAULT BUTTONS : HOVER ---- */
-    input[type=button]:hover, input[type=submit]:hover, .action:hover, button:hover, .button:hover, a:link.button:hover, a:visited.button:hover {
-        background-color: #000000;
-    }
-
-
-/* ----- TEXTBOXES ----*/
-
-textarea, INPUT[type=text], INPUT[type=textarea], INPUT[type=password], input[type=email], input[type=date], input[type=password], input[type=tel], .textbox {
-    background-image: none; /* --- Removes the default background gradient present on form controls in Safari on MAC ---- ETD */
-    border: 1px solid #787878;
-    outline: 2px solid #EFEFEF;
-    color: #212121;
-    font-family: 'Helvetica Neue 55';
-    font-size: 16px;
-    padding: 4px 5px 4px 10px;
-    cursor: text;
-}
-
-    textarea:focus, INPUT[type=text]:focus, INPUT[type=textarea]:focus, INPUT[type=password]:focus, input[type=email]:focus, input[type=date]:focus, input[type=password]:focus, input[type=tel]:focus, .textbox:focus {
-        cursor: text;
-    }
-
-input[type=checkbox] {
-    outline: 2px solid #EFEFEF;
-}
-
-/* Remove border on checkboxes and radios (IE only) */
-input[type=radio], input[type=checkbox] {
-    border: none;
-}
-
-
-/* ------ DROP DOWN BOXES ------ */
-
-select {
-    background-image: none;
-    background-color: white;
-    border: 1px solid #787878;
-    font-family: 'Helvetica Neue 65';
-    font-size: 14px;
-    outline: 2px solid #EFEFEF;
-    padding: 2px;
-}
-
-option {
-    background-color: #FFFFFF;
-    background: none;
-    background: #fff;
-    cursor: pointer;
-    padding: 1px 5px 1px 10px;
-}
-
-
-/* -- ADD SPACE BETWEEN TEXTBOX AND CALENDAR ICON ON CALENDAR CONTROL -- */
-.hasDatepicker {
-    margin-right: 5px;
-    width: 100px !important;
-}
-/* -- CHANGE CURSOR ON HOVER OVER CALENDAR ICON ON CALENDAR CONTROL -- */
-
-.ui-datepicker-trigger {
-    cursor: pointer;
-}
-
-input:focus, select:focus {
-    cursor: pointer;
-}
-
-label {
-    display: block;
-    line-height: 30px;
-    clear: both;
-    font-family: Arial, sans-serif;
-    padding: 3px;
-    font-size: 15px;
-    vertical-align: middle;
-}
-
-    label span {
-        float: left;
-        padding: 0px 18px 0px 0px;
-        margin: 0px 0px 0px 0px;
-        text-align: right;
-        width: 200px;
-    }
-
-        label span em {
-            color: #BE1E2D;
-        }
-
-.kill {
-    display: none;
-}
-
-/* ******************* */
-/* ---- FORM STYLE 02 ---- */
-/* ---- Login Pages ---- */
-/* ******************* */
-
-
-
-.form02 {
-    background-color: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    border-radius: 6px;
-    color: #A9A9A9;
-    font-family: 'Helvetica Neue 65';
-    padding: 40px;
-}
-
-    .form02 a {
-        color: #6E6E6E;
-        font-family: 'Helvetica Neue 57';
-    }
-
-    .form02 h1 {
-        font-family: 'Helvetica Neue 45';
-        font-size: 32px;
-        color: #1F1F1F;
-        text-transform: none;
-        padding-bottom: 10px;
-    }
-
-    .form02 INPUT[type=text], .form02 INPUT[type=textarea], .form02 INPUT[type=password] {
-        background-color: #E7E7E7;
-        border: 1px solid #BEBEBE;
-        padding: 15px;
-        border-radius: 3px;
-        width: 265px;
-        margin-bottom: 5px;
-    }
-
-    .form02 INPUT[type=submit] {
-        background-color: #414141;
-        color: #FFFFFF;
-        cursor: pointer;
-        margin-top: 15px;
-        padding: 10px;
-        text-transform: uppercase;
-        width: 120px;
-    }
-
-        .form02 INPUT[type=submit]:hover {
-            background-color: #000000;
-        }
-
-    .form02 label {
-        display: block;
-        font-family: 'Helvetica Neue 67';
-        color: #414141;
-        text-transform: uppercase;
-        font-size: 16px;
-    }
-
-
-
-
-
-/* Anchor Tags ------- Anchor Tags  */
-
-
-#systemHeader a {
-    font-size: 12px;
-    margin: 5px;
-}
-
-a img {
-    border: 0;
-}
-
-a.download:link, a.download:visited, a.newWin:link, a.newWin:visited {
-    text-decoration: underline;
-}
-/* a.action:link, a.action:visited { background-image: url(../images/bgActionButton.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #CCC; padding: 1px 8px; color: #444; font-weight: bold; font-size: 90%; text-decoration: none; } */
-/* a.action:hover { background-image: url(../images/bgActionButtonHover.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #666; padding: 1px 8px; color: #000; font-weight: bold; font-size: 90%; text-decoration: none; } */
-/* a.action:active { background-image: url(../images/bgActionButtonHover.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #666; padding: 3px 8px; color: #ED1C24; font-weight: bold; font-size: 90%; text-decoration: none; } */
-
-
-
-
-/* ------------------ SPECIAL BUTTONS FOR THE APPLICATION MANGER BUILD-A-SEARCH ------------------  */
-#spShowHideCurrentSerch, #A1, #StartSearch, #aAdd_SearchRow, #RemoveSearchLine {
-    background-color: #404040;
-    background-image: url('../images/ic-collapse.png');
-    background-repeat: no-repeat;
-    background-position: 15% 50%;
-    border-radius: 3px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Helvetica Neue 57'; /*-- Chrome establishes a default font for INPUT[type=button] in forms.css therefor this is needed to override that. Grrr. ---*/
-    font-size: 12px;
-    height: 30px;
-    line-height: 30px;
-    margin: 3px 5px 3px 5px;
-    padding-left: 5px;
-    padding-top: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    width: 70px;
-}
-
-
-#spShowHideCurrentSerch {
-    padding-left: 10px;
-}
-
-
-#A1 {
-    background-color: #be1e2d;
-    background-image: url('../images/ic-closex.png');
-    width: 70px;
-    padding-left: 12px;
-}
-
-#StartSearch {
-    background-image: url('../images/ic-newsearch.png');
-    width: 110px;
-    padding-left: 15px;
-}
-
-#aAdd_SearchRow {
-    background-image: url('../images/ic-add.png');
-    padding-left: 10px;
-}
-
-
-    #spShowHideCurrentSerch:hover, #A1:hover, #StartSearch:hover, #aAdd_SearchRow:hover, #RemoveSearchLine:hover {
-        background-color: #000000;
-    }
-
-#RemoveSearchLine {
-    background-color: #be1e2d;
-    background-image: url('../images/ic-closex.png');
-    background-position: 50% 50%;
-    width: 25px;
-    padding: 0px;
-    margin: 0px;
-    height: 25px;
-    line-height: 25px;
-}
-
-/* ----------------------------------------- */
-
-
-
-
-/* ETD Live data numbers on tool listings (Replaced with the 'badge' class)  */
-.tool a:link SPAN, .tool a:visited SPAN {
-}
-
-.thead a:link, .thead a:visited, .thead a:active, .caption a:link, .caption a:visited, .pager a:link, .pager a:visited {
-    background-color: Transparent;
-    color: #A5A5A5;
-    text-decoration: none;
-}
-/* a:hover, .thead a:hover, .caption a:hover, .pager a:hover { background-color: #CEEEFF; color: #000000; text-decoration: underline;  } */
-a.vcal:link, a.vcal:visited, a.vcal:hover {
-    background-image: url(../images/vcal.gif);
-    background-position: right;
-    text-decoration: none;
-    padding-right: 25px;
-    background-repeat: no-repeat;
-}
-
-
-
-.tab a:link, .tab a:visited {
-    cursor: hand;
-    color: #000;
-    background-color: Transparent;
-    text-decoration: none;
-}
-
-.tab .middle a:link, .tab .middle a:visited {
-    cursor: hand;
-    color: #333333;
-}
-
-.tab a:hover, .tab a:active {
-    cursor: hand;
-    text-decoration: underline;
-}
-
-
-
-/* A SINGLE TAB */
-
-.singletab {
-    display: block;
-    clear: both;
-    font-family: arial,sans-serif;
-    margin: 18px 0px 9px 0px;
-    border-width: 0px 0px 5px 0px;
-    border-style: solid;
-    border-color: #404040;
-    height: 30px;
-    padding: 0px;
-    font-weight: normal;
-    font-size: 13px;
-}
-
-
-    .singletab li {
-        border-top-left-radius: 5px;
-        -webkit-border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        -webkit-border-top-right-radius: 5px;
-        background-color: #808080;
-        color: #EFEFEF;
-        display: block;
-        float: left;
-        height: 27px;
-        vertical-align: middle; /*width:200px; padding:0px;margin:50px 7px;width:200px;color:#000;border-width:0 0 2px 0;border-style:solid;border-color:#B8CC6E; */
-        cursor: pointer;
-        text-transform: uppercase;
-        padding: 0px 2px 0px 2px;
-        margin: 1px 1px 1px 1px;
-    }
-
-        .singletab li.active {
-            background-color: #404040;
-            color: #FFF;
-            font-weight: normal;
-            border-top-left-radius: 5px;
-            margin-left: 0px;
-            padding-left: 0px;
-            -webkit-border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            height: 29px;
-        }
-
-
-        .singletab li span.tabInside {
-            color: #EFEFEF;
-            padding: 5px 5px 0px 5px;
-            margin: 1px 1px 1px 1px;
-            width: auto;
-            vertical-align: middle;
-            display: block;
-            float: left;
-            clear: none;
-        }
-
-
-
-/* tabs */
 #tabs {
     display: block;
     clear: both;
-    font-family: arial,sans-serif;
     margin: 18px 0px 9px 0px;
-    border-width: 0px 0px 5px 0px;
+    border-width: 0 0 5px 0;
     border-style: solid;
-    border-color: #404040;
     height: 30px;
-    padding: 0px;
+    padding: 0;
+}
+#tabs li {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    display: block;
+    float: left;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px; /*width:200px; padding:0px;margin:50px 7px;width:200px;color:#000;border-width:0 0 2px 0;border-style:solid;border-color:#B8CC6E; */
+}
+#tabs li.active {
+    font-weight: bold;
+    background-image: url(images/fadeTop.png);
+    background-position: 0 -10px;
+    background-repeat: repeat-x;
+    font-weight: bold;
+}
+#tabs li.active span.tabInside {
+    background-image: url(images/fadeTop.png);
+    background-position: 0 -10px;
+    background-repeat: repeat-x;
+}
+#tabs li span.tabInside {
+    background-position: right top;
+    padding: 8px 0px 0px 0px;
+    margin: 0px 10px 0 10px;
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    float: left;
+    clear: none;
+}
+/* #tabs li.active span.tabInside {background-color:#B83004;color:#FFF;} */
+#tabs li.active a:link, #tabs li.active a:visited {
+    margin: 0 0 0 0;
+    background-color: transparent;
+    text-decoration: none;
+    line-height: 20px;
+}
+#tabs li a:link, #tabs li a:visited {
+    margin: 0 0 0 0;
+    background-color: transparent;
+    text-decoration: none;
+    line-height: 20px;
+}
+#tabs li a:hover {
+    margin: 0 0 0 0;
+    text-decoration: underline;
+    line-height: 20px;
+}
+
+.jobNotes {
+    width: 150px;
+    float: right;
+    padding: 15px;
+    margin: 10px 0px 10px 10px;
+}
+
+faqLetter, .question, .answer {
+    display: block;
+    margin: 5px 5px 5px 20px;
+}
+.faqLetter {
     font-weight: normal;
-    font-size: 13px;
+    color: #555;
+    width: 20px;
+    display: block;
+    float: left;
 }
-
-    #tabs li {
-        border-top-left-radius: 5px;
-        -webkit-border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        -webkit-border-top-right-radius: 5px;
-        background-color: #808080;
-        color: #EFEFEF;
-        display: block;
-        float: left;
-        height: 27px;
-        vertical-align: middle; /*width:200px; padding:0px;margin:50px 7px;width:200px;color:#000;border-width:0 0 2px 0;border-style:solid;border-color:#B8CC6E; */
-        cursor: pointer;
-        text-transform: uppercase;
-        padding: 0px 2px 0px 2px;
-        margin: 1px 1px 1px 1px;
-    }
-
-        #tabs li.active {
-            background-color: #404040;
-            color: #FFF;
-            font-weight: normal;
-            border-top-left-radius: 5px;
-            margin-left: 0px;
-            padding-left: 0px;
-            -webkit-border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            height: 29px;
-        }
-
-        #tabs li span.tabInside {
-            color: #EFEFEF;
-            padding: 5px 5px 0px 5px;
-            margin: 1px 1px 1px 1px;
-            width: auto;
-            vertical-align: middle;
-            display: block;
-            float: left;
-            clear: none;
-        }
-
-        #tabs li.active span.tabInside {
-            color: #FFF;
-        }
-
-        /* ACTIVE TAB */
-        #tabs li.active a:link, #tabs li.active a:visited {
-            padding: 5px 5px 0px 5px;
-            margin: 1px 1px 1px 1px;
-            background-color: transparent;
-            color: #FFF;
-            text-decoration: none;
-            line-height: 20px;
-        }
-
-        #tabs li a:link, #tabs li a:visited {
-            padding: 5px 5px 0px 5px;
-            margin: 1px 1px 1px 1px;
-            background-color: transparent;
-            color: #fff !important;
-            text-decoration: none;
-            line-height: 20px;
-        }
-
-        #tabs li a:hover {
-        }
-
-        #tabs li.mine {
-            float: right;
-        }
-
-        #tabs li.all {
-        }
-
-        #tabs li.highlight {
-            width: 25px;
-        }
-
-            #tabs li.highlight.yellow {
-                background-color: #FCF598;
-            }
-
-            #tabs li.highlight.red {
-                background-color: #EFC7CA;
-            }
-
-            #tabs li.highlight.blue {
-                background-color: #CFD7EA;
-            }
-
-            #tabs li.highlight.green {
-                background-color: #E2F0CF;
-            }
-
-            #tabs li.highlight.purple {
-                background-color: #cbb6d5;
-            }
-
-            #tabs li.highlight.orange {
-                background-color: #ffb5a8;
-            }
-
-            #tabs li.highlight.teal {
-                background-color: #a6e0dc;
-            }
-
-            #tabs li.highlight.gold {
-                background-color: #ffe3c5;
-            }
-
-            #tabs li.highlight.yellow.active {
-                background-color: #FFDD15;
-            }
-
-            #tabs li.highlight.red.active {
-                background-color: #BE1E2D;
-            }
-
-            #tabs li.highlight.blue.active {
-                background-color: #3F61AD;
-            }
-
-            #tabs li.highlight.green.active {
-                background-color: #8BC53F;
-            }
-
-            #tabs li.highlight.purple.active {
-                background-color: #6b2e86;
-            }
-
-            #tabs li.highlight.orange.active {
-                background-color: #ff5c3d;
-            }
-
-            #tabs li.highlight.teal.active {
-                background-color: #00a69a;
-            }
-
-            #tabs li.highlight.gold.active {
-                background-color: #ffaf59;
-            }
-
-    #tabs select {
-        text-transform: none;
-    }
-
-/*#tabs li.mine, #tabs li.mine .tabInside {background-color:#83ABBB;}
-
-li#subSupportTab { float: right; margin-right: 10px; }
-li#oHRTabs_liSupportTab { float: right; margin-right: 10px; }
-*/
-
-.pager a:link {
-    padding: 4px 6px;
-}
-
-/* HTML Tag ETD ---------------------------------------------------------------------------------------- Body Tags  */
-/* Always display a vertical scrollbar. This eliminates the ~20 pixel jump when navigating from a scrolling page to a non-scrolling page (and vice-versa) ------  */
-html {
-    overflow-y: scroll;
-}
-
-/* Body Tags ------------------------------------------------------------------------------------------- Body Tags  */
-/* body {margin: 0px; background-image:url(../images/bg-texture-04.png); color: #000; font-family: 'DIN', "Trebuchet MS" , Arial, Verdana, Sans-Serif; font-size: 13px;} */
-
-.inactive {
-    background-color: #EDEDED;
+a.toTopAnchor, a#visited.toTopAnchor {
+    margin: 5px 10px 20px 40px;
+    display: block;
     color: #333;
 }
 
-    .inactive tr.rowA {
-        background-color: #EEE;
-    }
 
-    .inactive h2 {
-        border-color: #EEE;
-        color: #666;
-    }
-
-    .inactive h3 {
-        background-color: #666;
-        color: #FFF;
-    }
-
-    .inactive .break {
-        background-color: #CCC;
-        color: #333;
-    }
-
-.loginAnnounce {
-    border: 1px solid black;
-    padding: 1px 5px;
-    background-color: #ccc;
-    margin-bottom: 10px;
-    background-image: url(../images/loginAnnounceBg.jpg);
-    background-repeat: no-repeat;
+body {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #4D4D4D;
 }
 
-/* Div Tags --------------------------------------------------------------------------------------------- Div Tags  */
-div.buttons {
-    background-color: blue;
+div span.panelContent {
+    padding: 15px 15px;
     display: block;
-    margin: 10px 5px;
-    height: 26px;
 }
 
-/* CONTAINERS */
-
-/* PRIMARY CONTAINER OF ALL CONTENT ON ALL PAGES. */
-div.wrapper {
-}
-/* This style wasn't affecting anything. Wraps around top NAV bar. */
-
-/* SECONDARY CONTAINER OF ALL CONTENT ON ALL PAGES */
-div.content {
-    display: block;
-    width: 920px;
-    margin: 35px auto 0px auto;
-    padding: 0px;
-}
-    /* The AUTO on the left and right margins centers the entire web page within the browser window. */
-
-    /* PARAGRAPH TAG */
-    div.content p {
-        margin-left: 0px;
-        text-align: left;
-    }
-
-/* CONTAINER FOR MAIN TOOLS MENU */
-#satContent {
-}
-
-#hlpContent {
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-div.supportBar {
-    position: fixed;
-    bottom: 0px;
-    right: 320px;
-}
-
-
-
-
-/*--- USER NAME AT PAGE TOP */
-
-.UserNameNav {
-    white-space: nowrap;
-    margin-right: 5px;
-}
-
-.LogOut {
-    color: #FFF !important;
-    text-decoration: underline;
-    margin: 0 5px;
-    white-space: nowrap;
-}
-
-
-#hireNavLogo {
-    float: left;
-    clear: none;
-    width: 230px;
-    text-align: left;
-    margin-top: 30px;
-    margin-left: 20px;
-}
-
-#hireMenuBox {
-    clear: both;
-    padding: 0;
-    margin: 0px 0 0 0;
-    text-align: center;
-    background-color: #FFFFFF;
-}
-
-#hc {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+ul.applicationPageList, ul.applicationPageList li {
     margin: 0;
-    clear: both;
-    height: 125px;
-    z-index: 10;
-    top: 0px;
-    left: 0;
-}
-
-#fc {
-    width: 870px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 0;
-    margin-bottom: 100px;
-    background-color: transparent;
-    color: #000;
-}
-
-#hireMenuOptions {
     padding: 0;
-    margin: 0px;
-    height: 93px;
-    min-width: 900px;
+    list-style: none;
+    list-style-type: none;
 }
 
-    #hireMenuOptions ul {
-        float: right;
-        margin-top: 2px;
-    }
-
-    #hireMenuOptions li {
-        margin: 0 0 0;
-        height: 88px;
-        width: 80px;
-        float: left;
-        clear: none;
-        display: inline;
-        list-style-type: none;
-        text-align: center;
-        margin: 0;
-        border-left: 1px dotted #444;
-        font-size: 10px;
-        text-transform: uppercase;
-    }
-
-        #hireMenuOptions li a:link, #hireMenuOptions li a:visited {
-            text-align: center;
-            display: block;
-            margin: 0;
-            height: 88px;
-            text-decoration: none;
-            font-size: 0px;
-        }
-
-        #hireMenuOptions li a:hover {
-            border-bottom: 5px solid #5EC7DC;
-            background-color: transparent;
-        }
-
-        #hireMenuOptions li a:link {
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        #hireMenuOptions li#Tools a:link {
-            background-image: url(../images/nav-tools.png);
-        }
-
-        #hireMenuOptions li#Dashboard a:link {
-            background-image: url(../images/nav-dashboard.png);
-        }
-
-        #hireMenuOptions li#Reporting a:link {
-            background-image: url(../images/nav-reports.png);
-        }
-
-        #hireMenuOptions li#Configuration a:link {
-            background-image: url(../images/ic-configure.png);
-        }
-
-        #hireMenuOptions li#HelpCenter a:link {
-            background-image: url(../images/ic-support.png);
-        }
-
-/* CONTROLS WIDTH OF TOP NAV BAR - REMOVING A FIXED WIDTHH TAKES IT OUT TO 100% OF SCREEN WIDTH */
-.tedUserBox div, #hireMenuOptions {
-    margin-left: auto;
-    margin-right: auto;
+ul.applicationPageList li {
+    height: 25px;
+    padding: 1px;
+}
+ul.applicationPageList li.liSelect {
+    border: 1px solid #555500;
+    background-color: #EEF376;
+    color: #000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px 2px 2px 5px;
+}
+ul.applicationPageList li span.pageComplete {
+    line-height: 25px;
+    background-image: url(images/docs_16.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+ul.applicationPageList li span.pageComplete a:link, ul.applicationPageList li span.pageComplete a:visited {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    display: inline;
+}
+ul.applicationPageList li span.pageIncomplete {
+    line-height: 25px;
+    background-image: url(images/docs_16_off.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
 
-#welcomeHeader {
+.subPanel, .mainPanel, .fullPanel {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    background-repeat: repeat-x;
+    background-image: url(images/fadeTop.png);
+    behavior: url(iepngfix.htc);
+}
+
+.subPanel div, .mainPanel div, .fullPanel div {
+    border: 0;
+}
+.subPanel h5, .mainPanel h5, .fullPanel h5 {
+    margin-top: 1px;
+    padding-top: 0px;
+}
+
+.bottomCorner {
     display: none;
 }
-
-/* CLEANUP hide yahoo submenus */
-#hireMenuOptions ul div.bd {
-    display: none;
+.subPanel {
+    /*background-image:url(images/corners_280.gif);*/
+    clear: right;
+    width: 280px;
+    float: right;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
 }
+
+
+.mainPanel {
+    /*background-color:Orange;*/ /*background-image:url(images/corners_mainPanel.gif); background-repeat:no-repeat;*/
+    width: 600px;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+
+.fullPanel {
+    clear: both; /*            background-image:url(images/corners_fullPanel.png); background-repeat:no-repeat;*/
+    width: 900px;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+
+a.button:link, a.button:visited {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    background-repeat: repeat-x;
+    background-position: 0 -20px;
+    background-image: url(images/fadeTop.png);
+    behavior: url(iepngfix.htc);
+    background-color: #4D4D4D;
+    color: #FFF;
+    padding: 3px 7px;
+    font-weight: bold;
+    font-size: smaller;
+    text-decoration: none;
+}
+a.button:hover {
+    background-color: #2D2D2D;
+    border: 1px solid #FFF;
+}
+
+
 
 div.districtLogo {
-    background-color: Transparent;
-    height: 140px;
-    width: 200px;
-    margin: 4px 4px 4px 0px;
-    color: #000;
-}
-
-div.footer {
-    margin-right: auto;
-    margin-left: auto;
-    clear: both;
-    color: #333;
+    display: block;
     border: 0;
-    padding: 10px;
-    height: 70px;
-    width: 850px;
-    text-align: center;
-}
-
-body#login div.footer {
-    width: 420px;
-}
-
-div.footer p {
-    padding: 10px;
-}
-
-div.footer a:link, div.footer a:visited {
-}
-
-/* CONTROLS THE POSITION OF THE PAGE FOOTER WHICH IS ON MOST EVERY PAGE */
-#footerNetchemia {
-    text-align: center;
-}
-
-#footerSR {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-
-
-.screenHelp {
-    background-color: #EEE;
-    border-width: 2px 0px;
-    border-style: solid;
-    border-color: #333;
-    padding: 1px 10px 10px 10px;
-    margin: 0 50px 0 20px;
-}
-
-
-
-.candLinks {
-    width: 250px;
-    margin: 108px 0 0 15px;
-    border: 0;
-    float: right;
-    color: #000;
-    font-size: 12.5px;
-    line-height: 16px;
-}
-
-    .candLinks div {
-        background-color: #e7e7e7;
-        margin-bottom: 20px;
-    }
-
-    .candLinks strong {
-        display: block;
-        background-color: #606060;
-        margin-top: -5px;
-        padding: 4px 8px;
-        color: #FFF;
-        font-size: 13px;
-    }
-
-    .candLinks em {
-        padding: 1px 16px;
-    }
-
-    .candLinks a:link, .candLinks a:visited, .candLinks p {
-        display: block;
-        color: #000;
-        padding: 3px 8px;
-        text-decoration: underline;
-    }
-
-    .candLinks p {
-        text-decoration: none;
-    }
-
-    .candLinks a:hover {
-        color: #808080;
-        font-size: 12px;
-    }
-
-
-div.searchResults {
-    background-color: #CCC;
-    font-size: 12px;
-    position: absolute;
-    left: 490px;
-    top: 280px;
-    display: none;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #000;
-    padding: 4px;
-}
-
-.searchResults a:link, .searchResults a:visited, .searchResults strong {
-    display: block;
-    padding: 1px 5px 1px 5px;
-    color: #000;
-}
-
-.searchResults a:hover {
-    color: #FFF;
-    background-color: #333;
-}
-
-div.searchResults2 {
-    background-color: #FFF;
-    font-size: 12px;
-    position: absolute;
-    left: 490px;
-    top: 280px;
-    display: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000;
-    padding: 4px;
-    z-index: 9000;
-}
-
-.searchResults2 a:link, .searchResults2 a:visited, .searchResults strong {
-    display: block;
-    padding: 1px 5px 1px 5px;
-    color: #000;
-}
-
-.searchResults2 a:hover {
-    color: #FFF;
-    background-color: #333;
-}
-
-/* List Tags -------------------------------------------------------------------------------------- List Tags  */
-.versionHistory li {
-    font-weight: bold;
-}
-
-    .versionHistory li ul li {
-        font-weight: normal;
-    }
-
-    .versionHistory li ul {
-        margin-bottom: 20px;
-        font-weight: normal;
-    }
-
-/* Headline Tags -------------------------------------------------------------------------------------- Headline Tags  */
-/* h1 {text-align:left; display: block; background-color: Transparent; border: 0px; padding: 5px 0px 5px 0px; font-size: 32px; line-height: 150%; color: #9A8478; font-weight: normal; text-decoration:none; letter-spacing: -2px; text-transform: lowercase;} */
-/* h2 { border:0px;padding: 0px 0px 6px 0px; color: #716558; font-size: 30px; line-height: 100%;letter-spacing:-1px; opacity: .9; letter-spacing: -2px;} */
-
-/* ETD Short, Dotted Horizontal Line */
-
-
-/* ETD Vertical Squiggley Line */
-
-
-/* A VERTICAL CONTAINER FOR THE TOOLS ON THE FULL PAGE TOOLS AND CONFIGURE MENUS */
-div.toolColumn {
-    float: left;
-}
-
-
-/* A CONTAINER ON THE FULL PAGE TOOLS AND CONFIGURE MENUS (E.G. POSTING MANAGEMENT, APPLICATION MANAGEMENT */
-div.toolBox {
-    display: block;
-    margin: 15px 7.5px;
-    padding: 40px 20px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    width: 251px;
-    height: 180px;
-    vertical-align: top;
-    text-align: center;
-}
-
-
-/* THE SECTION TITLE ON THE FULL SCREEN TOOLS PAGE AND FULL SCREEN CONFIGURATION MENU PAGE */
-.toolBox h2 {
-    color: #000000;
-    height: auto;
-    font-family: 'Helvetica Neue 67';
-    font-size: 20.5px;
-    text-transform: none;
-    height: 50px;
-    margin-top: 8px;
-}
-
-/* NAME OF THE TOOL IN THE FULL PAGE TOOLS MENU PAGE */
-.tool a, .tool a:link, .tool a:visited, .tool a:active {
-    color: #404040;
-    display: block;
-    font-family: arial,sans-serif;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: left;
-}
-
-    /* ON HOVER */
-    .tool a:hover, .tool a:active {
-        display: block;
-        background-color: #D8F1F4;
-        border-radius: 4px;
-        color: #000;
-    }
-
-div.tool {
-    margin: 0px 0px 0px 0px;
-}
-
-div.toolNo, .toolNo a:link {
-    color: #4E4E4E;
-    background-color: #FFFFFF;
-}
-
-
-
-
-.toolBox h2 span {
-    display: block;
-    clear: both;
-    margin: 0px;
-    background-repeat: no-repeat;
-    font-size: 20px;
-    color: #716558;
-    line-height: 90%;
     margin: 0;
     padding: 0;
-    opacity: .5;
-    letter-spacing: 0px;
-}
-
-.toolBox h2.dashboard {
-    padding-left: 0px;
-}
-
-div.toolBox p {
-    margin: 0px;
-    padding: 3px;
-    font-size: 90%;
-    display: none;
-}
-
-
-
-#LiveChat1_subLiveChat {
-    clear: none;
-    float: right;
-    text-align: right;
-    margin-top: 10px;
-}
-
-h3 {
+    height: auto;
     clear: both;
-    background-color: #5EC7DC;
+}
+
+.dlPager {
+    margin: 5px;
+    padding: 3px 5px;
+}
+.dlPager a {
+    text-decoration: underline;
+}
+
+
+
+.addrPtn {
+}
+.addrPtnName {
+    background-color: pink;
+    float: left;
+}
+.addrPtnStreet {
+    background-color: blue;
+}
+.addrPtnCity {
+    background-color: green;
+    clear: none;
+}
+.addrPtnState {
+    background-color: yellow;
+    clear: none;
+}
+.addrPtnZip {
+    background-color: orange;
+    clear: none;
+}
+
+div.regPtn {
+    display: block;
+    clear: both;
+    height: auto;
+    margin: 10px 0;
+    padding: 5px;
+}
+.regPtn label {
+    clear: none;
+    width: 200px;
+    text-align: left;
+    float: left;
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+.regPtn label span {
+    clear: none;
+    width: 200px;
+    text-align: left;
+    padding: 0px 0px 15px 0px;
+    margin: 0;
+    display: inline;
+}
+.regPtn label span span {
+    padding: 0px;
+}
+.regPtn input {
+    clear: none;
+    margin-top: 0px;
+}
+
+div.longQuestion label, div.longQuestion label span {
+    clear: both;
+    display: block; /*float: none;*/
+    width: 100%;
+}
+div.longQuestion input, div.longQuestion select {
+    margin-left: 210px; /* Changed from 200px to 210px. For allignment with other controls*/
+    margin-bottom: 5px;
+}
+
+/*BOC Kapil*/
+
+ div.longQuestion span input 
+ {
+     margin-left: 0px;
+     margin-bottom:0px;
+ }
+ div.longQuestion span div:first-child input {
+     margin-left: 210px;
+ }
+ div.longQuestion span div:first-child + input {
+     margin-left: 0px;
+ }
+ div.longQuestion span div:first-child + input + input {
+    margin-left: 0px;
+ }
+
+/*EOC Kapil*/
+
+div.longAnswer label, div.longAnswer label span {
+    clear: both;
+    display: block; /*float: none;*/
+    width: 550px;
+}
+
+div.sectionHead {
     background-repeat: repeat-x;
-    margin: 40px 0 0 0;
-    padding: 2px 0 2px 5px;
-    border-width: 0px 0px 0px 0px;
-    border-style: solid;
-    border-color: #4D4D4D;
-    color: #000;
-    font-size: 100%;
-    line-height: 140%;
-    font-weight: bold;
-    background-repeat: repeat-x;
-    background-image: url(../images/fadeTop.png);
+    background-image: url(images/fadeTop.png);
+    behavior: url(iepngfix.htc);
+    background-position: 0 -20px;
     border-top-left-radius: 5px;
     -webkit-border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     -webkit-border-top-right-radius: 5px;
-}
-
-h4 {
-    font-size: 100%;
-    font-weight: bold;
-}
-
-h5 {
-    color: #999999;
-    font-size: 100%;
-    line-height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     margin: 0px;
-}
-
-/* Input Tags -------------------------------------------------------------------------------------- Input Tags  */
-#cmdScreenDate {
-    margin: 0px 0px 0px 6px;
-}
-
-/* Sets for Buttons */
-/* Establish some basic properties... */
-/* .add, .addHover, .cancel, .cancelHover, .delete, .deleteHover, .run, .runHover, .save, .saveHover, .saveComplete, .saveCompleteHover, .print, .printHover, .exit, .exitHover, .lock, .lockHover, .unlock, .unlockHover, .button, .buttonHover, a:link.button, a:visited.button { color: #FFF; background: #404040; font-family: 'Helvetica Neue 57'; font-size: 14px; font-weight: normal; text-transform: uppercase; } */
-/* background postion: horz vert */
-
-/* Stylize for specific states */
-
-
-/* PRIMARY BUTTON */
-/* .add, a.add:link, a.add:visited, .addHover, a.add:hover, a.addHover:hover, .save, .saveHover, .run { color: #FFF; background: #404040;     font-family: 'Helvetica Neue 57'; font-size: 14px; font-weight: normal; text-transform: uppercase; } */
-/* .addHover, a.add:hover, a.addHover:hover, .saveHover, .runHover {color: #000; border-color: #000; text-decoration: none; } */
-
-/* PERHAPS THIS REPRESENTS THE "ADD" AND "NEW" BUTTONS THROUGHOUT THE SYSTEM - CONSIDER THIS IF GIVING THOSE BUTTONS A DIFFERENT LOOKS THAN THE REST OF THE BUTTONS */
-/*  {background-color: #A5C43D; color: #000000; } */
-
-/* .cancel, .exit, a.cancel:link, a.cancel:visited {background-color:transparent;border:0; color: #5EC7DC; } */
-/* .cancelHover, .exitHover, a.cancel:hover, a.cancelHover:hover, a.cancel:active, a.cancelHover:active {text-decoration: underline;border:0;background-color:transparent;} */
-
-
-.delete, a.delete:link, a.delete:visited {
-    background-color: transparent;
-    border: 0;
-}
-
-.deleteHover, a.delete:hover, a.deleteHover:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    border: 0;
-    background-color: transparent;
-}
-
-
-
-.lock {
-    background-position: 0px -280px;
-    background-color: #896739;
-    color: #FFF;
-}
-
-.lockHover {
-    background-position: -300px -280px;
-    background-color: #896739;
-    color: #FFF;
-}
-
-.unlock {
-    background-position: 0px -3200px;
-    background-color: #896739;
-    color: #FFF;
-}
-
-.unlockHover {
-    background-position: -300px -3200px;
-    background-color: #896739;
-    color: #FFF;
-}
-
-.print {
-    background-position: 0px -200px;
-    background-color: #896739;
-    color: #FFF;
-}
-
-.printHover {
-    background-position: -300px -200px;
-    background-color: #896739;
-    color: #FFF;
-    border-color: #000;
-}
-
-
-
-/* .buttonHover, a:hover.button { background-position: -300px -240px; background-color: #5EC7DC; padding: 3px; color: #FFF; border-color: #000; background: #afd3db; */
-
-
-/* Table Tags -------------------------------------------------------------------------------------- Table Tags  */
-.thead {
-    color: #A5A5A5;
-}
-/*background-image: url("../images/fadeTop.png");*/
-caption, .caption {
-    background-color: #555;
-    background-image: url(../images/bgCaption.gif);
-    background-repeat: repeat-x;
-    margin: 0px 0px 0px 0px;
-    padding: 5px;
-    font-weight: normal;
-    color: #FFFFFF;
-    font-size: 140%;
-    text-align: left;
-}
-
-table.cdSchedule, table.cdSchedule td {
-    border-collapse: collapse;
-    border: 1px dashed #CCC;
-}
-
-table.adminToolList, table.adminToolNew, table.adminToolEdit, table.dataGrid {
-    border-collapse: collapse;
-    border: 0px;
-    border-color: #FFFFFF;
-    width: 100%;
-    margin: 0px 0px;
-    font-size: 100%;
-}
-
-    table.adminToolList td, table.adminToolList th, table.adminToolListNoRecords td, table.adminToolListNoRecords th, table.adminToolEdit td, table.adminToolEdit th, table.adminToolNew td, table.adminToolNew th {
-        border-collapse: collapse;
-        border: 0px;
-        padding: 5px;
-        vertical-align: top;
-    }
-
-thead tr, .pager {
-    background-color: #444;
-    color: #FFFFFF;
-}
-
-    .pager span {
-        background-color: #444;
-        color: #FFF;
-        padding: 3px;
-    }
-
-tr.thead th, th {
-    font-weight: normal;
-    text-align: left;
-}
-
-/* tbody { font-size: 90%; } */
-tfoot tr, .tfoot {
-    background-color: #EEE;
-    color: #000;
-}
-
-tr.rowA {
-}
-
-tr.rowB {
-}
-
-tr.rowA:hover {
-}
-
-tr.rowB:hover {
-}
-
-tr.rowSelect {
-    background-color: #AEE3EE;
-    color: #000;
-}
-
-tr.rowObsolete {
-    background-color: #EEE;
-    color: #999;
-}
-
-tr.rowAlert {
-    background-color: #FFCCCC;
-    color: #000;
-    border: 1px solid #FF0000;
-}
-
-tr.lastEdit {
-    background-color: #5EC7DC;
-    color: #333;
-}
-
-tr.break {
-    background-color: #555;
-    color: #FFF;
-}
-
-tr.rowDisabledA {
-    background-color: #EBF1F5;
-    color: #D2D2D2;
-}
-
-tr.rowDisabledB {
-    background-color: #FFF;
-    color: #D2D2D2;
-}
-
-tr.row {
-    border-bottom: 1px dotted #CCC;
-    background-color: #FFF;
-}
-
-    tr.row:hover {
-        background-color: #AEE3EE;
-    }
-
-    tr.row td {
-        border-bottom: 1px dotted #CCC;
-    }
-
-    tr.row.yellow {
-        background-color: #FCF598;
-    }
-
-        tr.row.yellow:hover {
-            background-color: #FBEE46;
-        }
-
-    tr.row.red {
-        background-color: #EFC7CA;
-    }
-
-        tr.row.red:hover {
-            background-color: #EF8991;
-        }
-
-    tr.row.blue {
-        background-color: #CFD7EA;
-    }
-
-        tr.row.blue:hover {
-            background-color: #9AB1E9;
-        }
-
-    tr.row.green {
-        background-color: #E2F0CF;
-    }
-
-        tr.row.green:hover {
-            background-color: #BCF075;
-        }
-
-    tr.row.purple {
-        background-color: #cbb6d5;
-    }
-
-        tr.row.purple:hover {
-            background-color: #9b72ae;
-        }
-
-    tr.row.orange {
-        background-color: #ffb5a8;
-    }
-
-        tr.row.orange:hover {
-            background-color: #ff8973;
-        }
-
-    tr.row.teal {
-        background-color: #a6e0dc;
-    }
-
-        tr.row.teal:hover {
-            background-color: #53c3bb;
-        }
-
-    tr.row.gold {
-        background-color: #ffe3c5;
-    }
-
-        tr.row.gold:hover {
-            background-color: #ffc98f;
-        }
-
-/* Paragraph Tags ------------------------------------------------------------------------------------- Paragraph Tags  */
-p {
-    font-size: 100%;
-}
-
-.jobAppDetails {
-    margin: 0 0 0 50px;
-    padding: 0;
-    border: 0;
-    line-height: 120%;
+    padding: 6px;
+    font-size: 120%;
     font-weight: bold;
+    line-height: 100%;
+}
+div.sectionSubText {
+    margin: 0px;
+    padding: 6px;
+    font-size: 95%;
 }
 
-.new, .edit, h1 span {
-    color: #333;
-}
-
-
-/* For Help */
-.screenHelp .question {
+label {
     display: block;
+    margin: 9px 9px 9px 0;
 }
 
-div.pageHelpLink {
-    float: right;
-    color: #333;
-    font-size: 11px;
+label span {
+    float: left;
+    width: 250px;
+    margin: 0 18px 9px 0;
 }
 
-    div.pageHelpLink a:link, div.pageHelpLink a:visited {
-        color: #333;
-    }
 
-/* For use as helper text or short clarifications */
-p.clarify {
-    font-style: italic;
-    font-size: 85%;
-    line-height: 120%;
+
+label span em {
+    margin-left: 3px;
+    font-weight: bold;
+    color: #E00;
 }
 
-p.lastEdit {
-    font-style: italic;
-    font-size: 10px;
-    line-height: 10px;
-    margin: 0;
+fieldset {
+    margin: 9px 0;
+    padding: 6px 9px;
     border: 0;
-    padding: 0;
-}
-/* #lblErrorMessage { background-color: #FFFF55; padding: 4px; color: #000; }*/
-.accent {
-    background-color: Transparent;
-    color: #ED1C24;
 }
 
-.subBy .date {
-    display: block;
-    color: #777;
-    font-size: 10px;
+fieldset.buttons {
+    text-align: right;
+    background-color: #EEE;
+    background-repeat: repeat-x;
+    background-image: url(images/fadeTop.png);
+    behavior: url(iepngfix.htc);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 
-/* Header ------------------------------------------------------ */
-#srMenuLogo {
-    position: relative;
-    top: -18px;
-}
+/* changed with 2.5 above */
 
-.toolbar a:link, .toolbar a:visited {
-    background-color: transparent;
-    margin-right: 10px;
-    padding: 1px 5px;
-    color: #FFF !important;
-    text-decoration: none;
-}
-
-.toolbar a:hover {
-    background-color: #DCE9F0;
+input:focus, textarea:focus, select:focus, checkbox:focus {
+    background-color: #F8FAC6;
+    border: 2px solid black;
     color: #000;
-    text-decoration: none;
-    padding: 1px 5px;
 }
-
-#systemHeader {
-    height: 35px;
-    padding: 0 10px;
-}
-
-a#navLogoHome:hover {
-    background-color: transparent;
-}
-
-
-
-/* Forms */
-/* input:focus, textarea:focus, select:focus, checkbox:focus { background-color: #F8FAC6; border: 2px solid black; color: #000; } */
 legend {
     margin: 0 0 0 -9px;
     padding: 0px 6px;
     border: 0px;
-    background-color: #FFFBF4;
-    color: #333;
-}
-/* label { display: block; clear: both; margin: 7px; border-width: 0; border-style: solid; border-color: #FFF; padding:3px } */
-/* label span { float: left; width: 200px; margin: 0 18px 9px 0; } */
-/* label span em, legend span em, legend em { margin-left: 3px; font-weight: bold; color: #E00; } */
-
-
-
-
-/* states */
-/* .error, .alert { background-color: #FFF000; padding: 3px; color: #000; } */
-.error, .alert {
-    border-radius: 3px;
-    font-weight: normal;
-    background-color: #FDE9E6;
-    line-height: 22px;
-    color: #D3222A;
-    padding: 10px;
-    display: block;
-}
-/* div.alert { padding-bottom: 10px; margin-top: 10px; background-color: #FFFF55;  -webkit- border: 1px solid #555500; } */
-.selected {
-    background-color: #5EC7DC;
-    padding: 3px;
-    color: #000;
-}
-
-.disselected {
-    background-color: #EEE;
-    padding: 3px;
+    background-color: #EBF1F5;
     color: #333;
 }
 
-.pendingDelete {
-    background-color: #880000;
-    padding: 3px;
-    color: #FFF;
+.radioGroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
 }
-
-.narrow {
-    width: 470px;
-    clear: none;
-}
-
-.info {
-    font-weight: normal;
-    border: 1px solid #555500;
-    background-color: #AEE3EE;
-    color: #000;
-    padding: 2px 2px 2px 5px;
+.radioGroup label {
+    position: relative;
+    top: -24px;
+    left: 230px;
     display: block;
+    width: 300px;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+}
+.radioGroup p {
+    width: 210px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+div.wrapper {
+    background-color: #4D4D4D;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+}
+div.content {
+    background-color: #FFFFFF;
+    display: block;
+    vertical-align: top;
+    width: 900px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    border: 0;
+    padding: 5px 8px 0px 8px;
+    text-align: left;
 }
 
 /* for development */
-.story {
+p.story {
+    display: inline;
     color: #FFFFFF;
     background-color: #FF1493;
     padding: 2px;
     font-weight: bold;
-    text-align: left;
-    display: none;
+    visibility: hidden;
 }
 
-p.story {
-    clear: both;
-    margin: 3px;
+/*.alert { background-color: #FFFF00; color: #000; text-align: left; line-height: 150%; font-weight: bold; }*/
+.alert {
+    font-weight: bold;
+    border: 1px solid #555500;
+    background-color: #EEF376;
+    color: #000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 2px 2px 2px 5px;
+    display: block;
 }
+
+/* Anchor Styles ----------------------------------------------------------------------------  Anchor Styles */
+a:link {
+  
+}
+
+a:visited {
+  
+}
+
+a:hover {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+}
+a:active {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #1b9dc6;
+}
+
+a.columnHeader:link, a.columnHeader:visited {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #E8EFF4;
+    text-decoration: underline;
+}
+a.columnHeader:hover, a.columnHeader:active {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+a.headline:link {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+a.headline:visited {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+a.headline:hover {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+    text-decoration: underline;
+}
+a.headline:active {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+a.jobTitle:link {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: underline;
+}
+a.jobTitle:visited {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: underline;
+}
+a.jobTitle:hover {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: rgb(148,48,4);
+    text-decoration: underline;
+}
+a.jobTitle:active {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* New Button Styles ----------------------------------------------------------------------------  New Button Styles */
+.defaultButton, .defaultButton:link, .defaultButton:visited {
+    background-color: #1B9DC6;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E8EFF4 #999999 #999999 #E8EFF4;
+    padding: 4px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.defaultButtonOver, .defaultButton:hover {
+    background-color: #DE3B04;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DE3B04;
+    padding: 4px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.smallButton, .smallButton:link, .smallButton:visited {
+    background-color: #E8EFF4;
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #002448 #000000 #000000 #002448;
+    padding: 2px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #002448;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.smallButtonOver, .smallButton:hover {
+    background-color: #DE3B04;
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DE3B04;
+    padding: 2px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* Div Styles -------------------------------------------------------------------------------------  Div Styles */
+
+div.jobDescriptionDetails {
+    background-color: #E8EFF4;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #DE3B04;
+    width: 100%;
+    margin: 0px;
+    padding: 6px 6px 18px 6px;
+}
+
+table.appSection {
+    margin: 8px 0px;
+    border-collapse: collapse;
+}
+div.districtLogo {
+    background-color: #FFF;
+    height: 100px;
+    width: 71px;
+    margin: 4px 4px 4px 0px;
+    color: #000;
+    overflow: hidden;
+}
+.footer {
+    margin: 10px 0 8px 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    padding: 8px;
+}
+#ncInfo {
+    float: right;
+    width: 250px;
+    font-size: 90%;
+}
+/* Forms */
+input:focus, textarea:focus, select:focus, checkbox:focus {
+    background-color: #F8FAC6;
+    border: 2px solid black;
+    color: #000;
+}
+
+/* Headline Styles ------------------------------------------------------------------------------  Headline Styles */
+h1 {
+    margin: 0px;
+    border: 0;
+    padding: 6px;
+    font-size: 150%;
+    line-height: 100%;
+}
+h2 {
+    background-color: #1B9DC6;
+    margin: 0px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    border-color: #002448;
+    padding: 6px;
+    color: #FFFFFF;
+    font-size: 120%;
+    line-height: 100%;
+}
+h4 {
+    display: block;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: white;
+    margin: 0px 0px 0px 12px;
+    line-height: 18px;
+}
+h5 {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: white;
+    margin: 12px 0px 12px 0px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgb(0,36,72);
+    padding: 0 0 4px 0;
+}
+
+/* Paragraph Styles ----------------------------------------------------------------------------  Paragraph Styles */
+p.appLabel {
+    display: block;
+    width: 125px;
+    margin: 3px;
+    text-align: right;
+    font-family: verdana, Geneva, verdana, sans-serif;
+    font-size: 11px;
+    color: #333333;
+}
+p.dateUpdated {
+    display: inline;
+    font-size: 100%;
+    color: black;
+}
+p.jobLocationDetail {
+    display: block;
+    margin: 6px 0 0 0;
+    color: #333333;
+}
+
+p.jobSalaryDetail {
+    display: block;
+    margin: 6px 0 0 0;
+    color: #333333;
+}
+p.jobLocation {
+    display: inline;
+    font-size: 100%;
+    color: black;
+}
+p.pagination {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+    display: inline;
+}
+
+p.schoolName {
+    font-size: 100%;
+    font-weight: bold;
+    color: #002448;
+    margin: 0px 8px 0px 0px;
+}
+p.sectionName {
+    display: block;
+    background-color: #E8EFF4;
+    margin: 20px 0 0 0;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: #002448;
+    padding: 4px 0px 6px 4px;
+    font-weight: bold;
+    color: #000;
+    font-size: 120%;
+    line-height: 150%;
+}
+.superHeadLine-black {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #000000;
+    margin: 0px 0px 0px 10px;
+}
+
+td.inlineInstructions p {
+    padding: 6px;
+    font-size: 100%;
+    line-height: 120%;
+    color: #333333;
+    font-style: italic;
+}
+
+.req {
+    font-weight: bold;
+}
+/* Table Styles ------------------------------------------------------------------------- Table Styles */
+
+table.applicantHeaderTable {
+    width: 100%;
+    font-size: 100%;
+    margin: 0 0 8px 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+tr.thead {
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #EEE;
+    background-repeat: repeat-x;
+    background-image: url(images/fadeTop.png);
+}
+tr.thead a:hover {
+    text-decoration: none;
+}
+
+/* This applies only to the job listings table on index.aspx */
+tr.jobListing {
+    background-color:#4d4D4D;
+    color:#FFF;
+    border-radius: 5px;
+    border: 1px solid #EEE;
+    background-repeat:repeat-x;
+    background-image:url(images/fadeTop.png);
+}
+
+/* Wraps each section of the appliction for consistent spacing */
+table.appSection {
+    width: 600px;
+    margin: 10px 0px;
+    border-collapse: collapse;
+}
+
+table.buttonTable {
+    width: 100%;
+    background-color: #1B9DC6;
+    border-collapse: collapse;
+    text-align: center;
+}
+table td {
+    vertical-align: top;
+}
+td.inlineInstructions {
+    background-color: #FBE7E0;
+}
+.loginTable {
+    background-color: #002448; /* background-image:url(images/bg-smallLogin.jpg); */ /*	width:100%; */
+    padding: 10px;
+    border-width: 0;
+    font-size: 100%;
+    font-weight: bold;
+    color: white;
+}
+.loginTable {
+    color: white;
+    font-size: 100%;
+}
+.newApplicantTable {
+    background-color: #1B9DC6; /* background-image:url(images/bg_candidate_welcome.jpg); */ /* width:100%; */
+    margin: 0px;
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+}
+table.jobsTable {
+    background-color: #E8EFF4;
+    border: 0px;
+    border-collapse: collapse;
+    font-size: 100%;
+}
+table.jobsTable td {
+    padding: 3px;
+}
+table.jobsTable tr.jobsGridRowA {
+    background-color: #FFFFFF;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+table.jobsTable tr.jobsGridRowA:hover {
+    background-color: #E8EFF4;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #DE3B04;
+}
+table.jobsTable tr.jobsGridRowB {
+    background-color: #E8EFF4;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #EAF6FA;
+}
+table.jobsTable tr.jobsGridRowB:hover {
+    background-color: #E8EFF4;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #DE3B04;
+}
+
+td.reqCell {
+    width: 15px;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+table {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.altBg {
+    background-color: #EFEFEF;
+}
+.row {
+    clear: both;
+    display: block;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+tr.rowA {
+    background-color: #EEE;
+    color: #000;
+}
+tr.rowB {
+    background-color: #FFF;
+    color: #000;
+}
+tr.rowA:hover {
+    background-color: #EEF376;
+    color: #000;
+}
+tr.rowB:hover {
+    background-color: #EEF376;
+    color: #000;
+}
+
+tr.regCustom {
+    background-color: #EEE;
+    color: #000;
+}
+tr.altCustom {
+    background-color: #FFF;
+    color: #000;
+}
+tr.regCustom:hover {
+    background-color: #EEF376;
+    color: #000;
+}
+tr.altCustom:hover {
+    background-color: #EEF376;
+    color: #000;
+}
+
+
+
+.error {
+    background-color: #FF0;
+    padding: 4px;
+}
+
+
 
 /* For DynaList */
 
@@ -1790,54 +956,49 @@ p.story {
     border: 1 green solid;
     color: #333;
 }
-
-    .LoadingCover span {
-        background-image: url(../Images/snake_transparent.gif);
-        background-repeat: no-repeat;
-        background-position: center left;
-        padding: 0px 0px 0px 25px;
-        font-size: larger;
-        font-weight: bold;
-    }
+.LoadingCover span {
+    background-image: url(Images/snake_transparent.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0px 0px 0px 25px;
+    font-size: larger;
+    font-weight: bold;
+}
 
 a.SearchHeaderUp {
-    background-image: url(../Images/sort_up.png);
+    background-image: url(Images/sort_up.gif);
     background-repeat: no-repeat;
     background-position: center right;
     padding: 0px 15px 0px 0px;
     cursor: hand;
     cursor: pointer;
 }
-
-    a.SearchHeaderUp:hover {
-        background-image: url(../Images/sort_down.png);
-    }
+a.SearchHeaderUp:hover {
+    background-image: url(Images/sort_down.gif);
+}
 
 a.SearchHeaderDown {
-    background-image: url(../Images/sort_down.png);
+    background-image: url(Images/sort_down.gif);
     background-repeat: no-repeat;
     background-position: center right;
     padding: 0px 15px 0px 0px;
     cursor: hand;
     cursor: pointer;
 }
-
-    a.SearchHeaderDown:hover {
-        background-image: url(../Images/sort_up.png);
-    }
+a.SearchHeaderDown:hover {
+    background-image: url(Images/sort_up.gif);
+}
 
 a.SearchHeader {
     padding: 0px 15px 0px 0px;
     cursor: hand;
     cursor: pointer;
 }
-
-    a.SearchHeader:hover {
-        background-image: url(../Images/sort_up.png);
-        background-repeat: no-repeat;
-        background-position: center right;
-    }
-
+a.SearchHeader:hover {
+    background-image: url(Images/sort_up.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
 
 /* END - For DynaList */
 
@@ -1847,9 +1008,7 @@ a.SearchHeader {
     text-decoration: underline;
     padding: 1px 0px 1px 1px;
     font-weight: bold;
-    text-align: left;
 }
-
 .staticInfoPlain {
     margin-left: 0px;
     color: #000;
@@ -1857,1510 +1016,216 @@ a.SearchHeader {
 }
 
 
-/* Candidate summary bar */
 
 
-/* ----- APPLICATION MANAGER - * CLASSIC VIEW * ----- */
-/* Informational bar across the top of the page. Includes candidate name and other stats.  */
-div#candidateVitals {
-    -webkit- display: block;
-    color: #000;
-    height: 50px;
-    margin-top: 10px;
-}
+/* subMenu */
 
-.vitalItem {
-    border: 1px solid #808080;
-    float: right;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    display: block;
-    height: 70px;
-    width: 90px;
-}
-
-    .vitalItem .score {
-        font-size: 25px;
-        font-weight: bold;
-        clear: both;
-        display: block;
-    }
-
-#GallupTIScore, #AvgIntScore {
-    font-size: 15px;
-    font-weight: bold;
-    clear: both;
-    display: block;
-}
-
-
-/* Candidate Name # In 'CLASSIC VIEW' */
-#candidateName {
-}
-
-    /* Candidate ID # In 'CLASSIC VIEW' */
-    #candidateName #cid {
-    }
-
-/* individual data sections */
-
-.itemList, .itemList li, .summaryItem {
-    list-style-type: none;
-    margin: 0;
+ul.subMenu {
+    margin: 0 0 20px 0px;
     padding: 0;
-}
-
-.summaryItem {
-    margin: 5px 0 0 5px;
-    clear: both;
-}
-
-    .summaryItem li {
-        width: 31%;
-        float: left;
-        margin: 0 1% 0 0;
-        clear: none;
-    }
-
-    .summaryItem .summaryAppTitle {
-        width: 40%;
-    }
-
-    .summaryItem .summaryAppInfo {
-        width: 18%;
-    }
-
-    .summaryItem .summaryHalf {
-        width: 45%;
-    }
-
-    .summaryItem .summaryComments, .summaryItem .summaryDetails {
-        float: none;
-        display: block;
-        clear: both;
-        width: 98%;
-    }
-
-    .summaryItem .summaryDetails {
-        text-align: right;
-    }
-
-.screeningDate, .screeningName, .screeningScore {
-    font-weight: bold;
-}
-
-#srMenuBarBox {
-    margin-bottom: 20px;
-    height: 25px;
-    overflow: hidden;
-}
-
-
-/*nfDialog - Styles*/
-.nfDialog_GreyOutMask {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
     width: 100%;
-    height: 100%;
-    z-index: 9990;
-    background-color: #000;
-    filter: alpha(opacity=50);
-    opacity: .50;
+    border-bottom: 5px solid;
+    height: 20px;
 }
 
-.nfDialog_Button {
-    display: inline-block;
-    border: solid 1px #000000;
-    border-radius: 2px 2px 2px 2px;
-    -webkit-border-radius: 2px 2px 2px 2px;
-    border-radius: 2px 2px 2px 2px;
-    margin-top: 4px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    background-color: #333;
-    width: 100px;
-    color: #FFF;
-    margin-left: 25px;
-    margin-right: 25px;
-    text-align: center;
+ul.subMenu li {
+    display: inline;
+    margin: 0 0 50px 0px;
+    padding: 5px 20px 5px 20px;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;
+}
+
+.subMenu li:hover, .subMenu li.active:hover {
+}
+
+.subMenu li.active {
     font-weight: bold;
 }
 
-#dvnfDialog_Box_Yes {
-    float: left;
-    margin-left: 40px;
-}
 
-#dvnfDialog_Box_No {
-    float: right;
-    margin-right: 40px;
-}
+/* End - SubMenu */
 
-.nfDialog_Button:hover {
-    background-color: #AAA;
-    color: #000;
-}
-
-.nfDialog_DialogBox {
-    border: solid 2px #456;
-    background-color: #EEEEEE;
-    color: #000;
-    font-weight: bold;
-    font-size: 10pt;
-    width: 400px;
-    text-align: center;
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    vertical-align: middle;
-    padding: 10px 10px 10px 10px;
-}
-
-.nfDialog_DialogBox_Tasks {
-    display: inline-block;
-    border: 0;
-    margin: 5px 0 10px 0;
-    width: 350px;
-    text-align: center;
-}
-
-.nfDialog_DialogBox_Message {
-}
-
-.alcBox {
-    background-image: url(../images/lcbackground.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    width: 320px;
-    height: 32px;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    padding: 0px;
-    font-size: 5px;
-}
-
-    .alcBox a:link, .alcBox a:visited, .alcBox a:hover, .alcBox a:active {
-        background-color: Transparent;
-        color: #000;
-        text-decoration: none;
-        margin: 10px 0 0 50px;
-        font-weight: bold;
-        font-size: 5px;
-        display: block;
-    }
-
-.ImpersonateNotice {
-    width: 450px;
-    background-color: #A80000;
-    filter: alpha(opacity=60);
-    opacity: .60;
-    float: right;
-    clear: none;
-    color: #FFF;
-    padding-left: 10px;
-    font-size: 12px;
-    z-index: 9999;
-    height: 40px;
-    border-radius: 0 0 0 5px;
-    -webkit-border-radius: 0 0 0 5px;
-    border-radius: 0 0 0 5px;
-    font-weight: bold;
-}
-
-    .ImpersonateNotice span {
-        float: left;
-        padding-top: 5px;
-        margin-top: 5px;
-    }
-
-    .ImpersonateNotice a {
-        color: #FFF;
-        float: right;
-        padding: 5px;
-        margin: 5px;
-        position: relative;
-    }
-
-        .ImpersonateNotice a:hover {
-            background-color: #000;
-            color: #FFF;
-            position: relative;
-        }
-
-img.ui-datepicker-trigger {
+div#oApplicantProfileTabs_liAdjunctListing, div#oApplicantProfileTabs_liAdjunctCourses, div#oApplicantProfileTabs_liAdjunctHistory {
+    display: inline;
+    width: auto;
     margin-left: 10px;
 }
 
 
-.hide {
-    display: none;
-}
+/* Sets for Buttons */
+/* Establish some basic properties... */
+/*
+.add, .addHover, .cancel, .cancelHover, .delete, .deleteHover, .run, .runHover, .save, .saveHover, .saveComplete, .saveCompleteHover, .print, .printHover, .exit, .exitHover, .lock, .lockHover, .unlock, .unlockHover, .button, .buttonHover { background-image: url(images/bg_allButtons.jpg); background-repeat: repeat-x; margin: 7px; border: 1px solid #888; padding: 3px 3px 3px 3px; width: auto; overflow: visible; color: #FFF; font-weight: bold; text-decoration: none; text-align: left; font-size: 11px; }
 
 
-/* ED */
-.activationArea {
-    height: 28px;
-    border: 1px solid yellow;
-    margin-top: 8px;
-    margin-bottom: 0;
-    padding: 0;
-    display: none;
-}
+.add, a.add:link, a.add:visited { background-position: 0px -80px; background-color: #75853B; color: #000; }
+.addHover, a.add:hover, a.addHover:hover { background-position: -300px -80px; background-color: #75853B; color: #FFFCEF; border-color: #000; text-decoration: none; }
 
-.bg-supporttab {
-    background-image: URL(../images/BG-TED-SupportTab_New.png);
-    width: 114px;
-    height: 134px;
-    vertical-align: bottom;
+.cancel, .exit, a.cancel:link, a.cancel:visited { background-position: 0px -160px; background-color: #c3d33d; color: #FFF; }
+.cancelHover, .exitHover, a.cancel:hover, a.cancelHover:hover { background-position: -300px -160px; background-color: #CC3000; color: #FFFCEF; border-color: #000; text-decoration: none; }
+
+.delete, a.delete:link, a.delete:visited { background-position: 0px -120px; background-color: #c3d33d; color: #FFF; }
+.deleteHover, a.delete:hover, a.deleteHover:hover { background-position: -300px -120px; background-color: #CC3000; color: #FFFCEF; border-color: #000; text-decoration: none; }
+
+.run { background-position: 0px 0px; background-color: #75853B; }
+.runHover { background-position: 0px -300px; background-color: #75853B; color: #FFF; border-color: #000; }
+
+.save { background-position: 0px 0px; background-color: #75853B; color: #000; }
+.saveHover { background-position: -300px 0px; background-repeat: repeat-x; background-color: #75853B; color: #FFFCEF; border-color: #000; }
+
+.saveComplete { background-position: 0px -40px; background-color: #758500; color: #000; }
+.saveCompleteHover { background-position: -300px -40px; background-color: #758500; color: #FFFCEF; border-color: #000; }
+
+.lock { background-position: 0px -280px; background-color: #896739; color: #FFF; }
+.lockHover { background-position: -300px -280px; background-color: #896739; color: #FFF; }
+
+.unlock { background-position: 0px -3200px; background-color: #896739; color: #FFF; }
+.unlockHover { background-position: -300px -3200px; background-color: #896739; color: #FFF; }
+
+.print { background-position: 0px -200px; background-color: #896739; color: #FFF; }
+.printHover { background-position: -300px -200px; background-color: #896739; color: #FFF; border-color: #000; }
+
+
+.button, a:link.button, a:visited.button { background-position: 0px -240px; background-color: #302C38; padding: 3px; color: #FFF; }
+.buttonHover, a:hover.button { background-position: -300px -240px; background-color: #302C38; padding: 3px; color: #FFF; border-color: #000; }
+*/
+/*
+a.action:link, a.action:visited { background-image: url(images/bgActionButton.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #CCC; padding: 1px 8px; color: #444; font-weight: bold; font-size: 90%; text-decoration: none; }
+a.action:hover { background-image: url(images/bgActionButtonHover.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #666; padding: 1px 8px; color: #000; font-weight: bold; font-size: 90%; text-decoration: none; }
+a.action:active { background-image: url(images/bgActionButtonHover.gif); background-repeat: repeat-x; background-color: #EEE; margin: 2px 5px 2px 10px; border: 1px solid #666; padding: 3px 8px; color: #ED1C24; font-weight: bold; font-size: 90%; text-decoration: none; }
+*/
+
+div.Page {
+    clear: both;
     display: block;
-    float: left;
-    position: fixed;
-    bottom: 0;
-    left: 120px;
+    float: none;
 }
-
-.bg-feedbacktab {
-    background-image: URL(../images/BG-TED-FeedbackTab_New.png);
-    width: 114px;
-    height: 134px;
-    vertical-align: bottom;
+div.Section {
+    page-break-inside: avoid;
+    clear: both;
     display: block;
-    float: left;
-    position: fixed;
-    bottom: 0;
-    left: 10px;
+    float: none;
 }
-
-.downTab {
-    bottom: -98px;
-    position: fixed;
-    cursor: pointer;
-}
-
-.ic-supporticons {
-    width: 40px;
-    height: 63px;
-    float: left;
+span.SubSection {
+    clear: both;
     display: block;
-    margin: 10px;
-    margin-left: 9px;
-    margin-right: 9px;
-    margin-top: 50px;
-    cursor: pointer;
+    float: none;
+    padding-left: 15px;
+}
+span.SectionHeader {
+    clear: both;
+    display: block;
+    float: none;
 }
 
-    .ic-supporticons:hover {
-        background-color: transparent;
-        border-radius: 10px;
-    }
-/*#FFA924*/
-
-#liveagent_button_offline_5731S000000fxSf, #liveagent_button_online_5731S000000fxSf {
-    width: 45px;
-}
-
-[aria-labelledby = ui-dialog-title-salesForceDialog] {
-    margin-top: -150px;
-    padding: 10px;
-}
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] .ui-widget-header {
-        display: none;
-    }
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] .ui-widget-content {
-        background: none;
-        border: none;
-    }
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] label {
-        margin: 20px 0px 10px 0px;
-        font-weight: bold;
-        font-size: 16px;
-    }
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] #salesForceSearchText {
-        padding: 8px 6px;
-    }
-
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] div.ui-dialog-buttonpane div.ui-dialog-buttonset button {
-        background-color: #ffffff;
-        border: none;
-    }
-
-    [aria-labelledby = ui-dialog-title-salesForceDialog] .ui-button-text {
-        background-color: #404040;
-        color: #FFFFFF;
-        cursor: pointer;
-        font-family: 'Helvetica Neue 55';
-        font-size: 14px;
-        margin: 3px 3px 3px 3px;
-        padding: 5px 10px 5px 10px;
-        text-transform: uppercase;
-        border: none;
-    }
-
-        [aria-labelledby = ui-dialog-title-salesForceDialog] .ui-button-text:hover {
-            background-color: #000000;
-        }
-
-#ic-chat {
-    background-image: URL(../images/Support-Chat.png);
-    margin-left: 12px;
-    margin-right: 8px;
-}
-
-    #ic-chat:hover {
-        background-image: URL(../images/Support-Chat-over.png);
-    }
-
-    #ic-chat.offline {
-        background-image: URL(../images/Support-Chat-Offline.png);
-    }
-
-#ic-issues {
-    background-image: URL(../images/ic-issues.png);
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-    #ic-issues:hover {
-        background-image: URL(../images/ic-issues-over.png);
-    }
-
-.ic-help {
-    background-image: URL(../images/Support-Help.png);
-    margin-left: 0px;
-    margin-right: 11px;
-    float: right;
-}
-
-    .ic-help:hover {
-        background-image: URL(../images/Support-Help-over.png);
-    }
-
-#ic-ideas {
-    background-image: URL(../images/Feedback-Ideas.png);
-    margin-left: 13px;
-}
-
-    #ic-ideas:hover {
-        background-image: URL(../images/Feedback-Ideas-over.png);
-    }
-
-#ic-love {
-    background-image: URL(../images/Feedback-Love.png);
-    margin-left: 0px;
-    margin-right: 12px;
-    float: right;
-}
-
-    #ic-love:hover {
-        background-image: URL(../images/Feedback-Love-over.png);
-    }
-
-@media print {
-    .yui-skin-sam {
-        display: none;
-    }
-
-    .footer {
-        display: none;
-    }
-
-    #nfNotification_dvGreyOutMask {
-        display: none;
-    }
-
-    #dvNotif_Loading {
-        display: none;
-    }
-
-    #dvNotificationBar {
-        display: none;
-    }
-
-    #dvNotificationMenu {
-        display: none;
-    }
-
-    #nfNotification_dvTotalNewItems {
-        display: none;
-    }
-
-    #dvNotificationMsg_Exit {
-        display: none;
-    }
-
-    #rhUserMenuBox {
-        display: none;
-    }
-
-    #hireMenuBox {
-        display: none;
-    }
-
-    div.content {
-        width: 95%;
-    }
+.accent {
+    font-family: verdana, Geneva, verdana, sans-serif;
+    color: #990000;
+    text-decoration: none;
 }
 
 
-/* TYPEFACES
-   ================================================== */
 
-/* --------------- Atrament ----------------- */
-
-
-
-
-
-@font-face {
-    font-family: 'Atrament Medium';
-    src: url('Typefaces/atrament_medium.eot');
-    src: url('Typefaces/atrament_medium.eot?#iefix') format('embedded-opentype'), url('Typefaces/atrament_medium.woff') format('woff'), url('Typefaces/atrament_medium.ttf') format('truetype'), url('Typefaces/atrament_medium.svg') format('svg');
+span.spanish {
     font-weight: normal;
     font-style: normal;
+    color: #555;
+    margin-left: 10px;
 }
-
-
-@font-face {
-    font-family: 'Atrament Light';
-    src: url('Typefaces/atrament_light.eot');
-    src: url('Typefaces/atrament_light.eot?#iefix') format('embedded-opentype'), url('Typefaces/atrament_light.woff') format('woff'), url('Typefaces/atrament_light.ttf') format('truetype'), url('Typefaces/atrament_light.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+div.sectionHead span.spanish {
 }
-
-
-
-/* --------------- Helvetica Neue ----------------- */
-
-
-/* -- Helvetica Neue 35 Thin -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 35';
-    src: url('Typefaces/HelveticaNeueLTStd-Th.eot');
-    src: url('Typefaces/HelveticaNeueLTStd-Th.eot?#iefix') format('embedded-opentype'), url('Typefaces/HelveticaNeueLTStd-Th.ttf') format('truetype'), url('Typefaces/HelveticaNeueLTStd-Th.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
-/* -- Helvetica Neue 55 Roman -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 55';
-    src: url('Typefaces/HelveticaNeueLTStd-Roman-WEB.eot');
-    src: url('Typefaces/HelveticaNeueLTStd-Roman-WEB.eot?#iefix') format('embedded-opentype'), url('Typefaces/HelveticaNeueLTStd-Roman-WEB.ttf') format('truetype'), url('Typefaces/HelveticaNeueLTStd-Roman-WEB.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* -- Helvetica Neue 57 Condensed -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 57';
-    src: url('Typefaces/helveticaltstd-cond-webfont.eot');
-    src: url('Typefaces/helveticaltstd-cond-webfont.eot?#iefix') format('embedded-opentype'), url('Typefaces/helveticaltstd-cond-webfont.ttf') format('truetype'), url('Typefaces/helveticaltstd-cond-webfont.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* -- Helvetica Neue 65 Medium -- */
-
-
-@font-face {
-    font-family: 'Helvetica Neue 65';
-    src: url('Typefaces/helveticaneueltstd-md-webfont.eot');
-    src: url('Typefaces/helveticaneueltstd-md-webfont.eot?#iefix') format('embedded-opentype'), url('Typefaces/helveticaneueltstd-md-webfont.woff') format('woff'), url('Typefaces/helveticaneueltstd-md-webfont.ttf') format('truetype'), url('Typefaceshelveticaneueltstd-md-webfont.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* -- Helvetica Neue 67 Medium Condensed -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 67';
-    src: url('Typefaces/helveticaneueltstd-mdcn-webfont.eot');
-    src: url('Typefaces/helveticaneueltstd-mdcn-webfont.eot?#iefix') format('embedded-opentype'), url('Typefaces/helveticaneueltstd-mdcn-webfont.ttf') format('truetype'), url('Typefaces/helveticaneueltstd-mdcn-webfont.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* -- Helvetica Neue 77 Bold Condensed -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 77';
-    src: url('Typefaces/HelveticaNeueLTStd-BdCn.eot');
-    src: url('Typefaces/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'), url('Typefaces/HelveticaNeueLTStd-BdCn.woff') format('woff'), url('Typefaces/HelveticaNeueLTStd-BdCn.ttf') format('truetype'), url('Typefaces/HelveticaNeueLTStd-BdCn.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* -- Helvetica Neue 47 Light Condensed -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 47';
-    src: url('Typefaces/HelveticaLTStd-LightCond.otf');
-    src: url('Typefaces/HelveticaLTStd-LightCond.otf?#iefix') format('embedded-opentype'), url('Typefaces/helveticaltstd-lightcond-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* -- Helvetica Neue 45 Light -- */
-
-@font-face {
-    font-family: 'Helvetica Neue 45';
-    src: url('Typefaces/HelveticaLTStd-Light.otf');
-    src: url('Typefaces/HelveticaLTStd-Light.otf?#iefix') format('embedded-opentype'), url('Typefaces/helveticaltstdlight.ttf') format('truetype'), url('Typefaces/helveticaltstdlight.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
-.corebutton INPUT[type='button'], .corebutton {
-    font-family: 'DIN Sans 300';
-    font-size: 16px;
-    padding: 5px;
-    border: 2px solid #FFFFFF;
-    background-image: -moz-linear-gradient(top, #99C8CA, #429297);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#99C8CA), to(#429297));
-    background-image: -webkit-linear-gradient(top, #99C8CA, #429297);
-    background-image: -ms-linear-gradient(top, #99C8CA, #429297);
-    background-image: -o-linear-gradient(top, #99C8CA, #429297);
-}
-
-/*Sandip TEX6 – Change display of disabled fields changes*/
-.rowG {
-    color: #E6E6E6;
-}
-
-    .rowG:hover {
-        color: #E6E6E6;
-    }
-
-.DisableButton {
-    display: none;
-    background-color: #EFEFEF;
-    color: #FFFFFF;
-    font-size: 12px;
-    margin: 0px;
-    padding: 4px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    vertical-align: middle;
-}
-
-    .DisableButton:hover {
-        color: #716558;
-        text-decoration: none;
-    }
-
-
-/*Sandip TEX6 – Change display of disabled fields changes*/
-
-/* --------------- DIN Sans ----------------- */
-
-/* TEMP TEMP TEMP 
-
-#tabs {height:1px; background-color:#FFF;border:0;}
-#tabs ul, #tabs li {display:none;}*/
-
-
-/*Boc Sandip TEX16 – Global Filter Changes*/
-
-.col4-style select {
-    width: 278px !important;
-}
-
-.btnMngFilters {
-    padding: 10px 21px;
-}
-
-.btnFieldSet {
-    float: left;
-    margin: 14px 0 0;
-    padding: 0;
-    width: 100%;
-}
-
-.inputFloatLeft {
-    float: left !important;
-}
-
-.inputFloatRight {
-    float: right !important;
-}
-
-.aFloatRight {
-    float: right !important;
-    padding: 5px 50px !important;
-}
-
-.aMargin-l-None {
-    margin-left: 5px !important;
-    float: none !important;
-    padding: 5px 50px !important;
-}
-
-
-div#divGlobalSearchSets TABLE tr td:nth-of-type(1) {
-    padding-left: 20px;
-}
-
-div#divGlobalSearchSets TABLE tr td:nth-of-type(7) {
-    padding-right: 20px;
-}
-
-.globalAssignedFilter table label {
+div.longQuestion label span.spanish {
     display: inline;
 }
 
-.globalAssignedFilter #ulAssignedTo {
-    margin: 0px;
-    padding: 10px;
+span.PageIndexNumber:hover {
+    background-color: #FFF;
+    color: #000;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    text-decoration: none;
+}
+span.PageIndexNumber {
+    color: #000;
+    background-color: #EEE;
+    margin: 2px;
+    padding: 1px 5px 2px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    cursor: hand;
+}
+.PageIndexNumberCurrent {
+    z-index: 100;
+    margin: 2px;
+    padding: 3px 5px 2px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    background-color: #FFF;
 }
 
-    .globalAssignedFilter #ulAssignedTo li {
-        list-style-type: none;
-        padding: 2px;
-    }
-
-        .globalAssignedFilter #ulAssignedTo li:hover {
-            background-color: #EEF376;
+.regProfile input{
+            width: 250px;
         }
 
-.globalAssignedFilter img.Remove {
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.globalAssignedFilter .heading {
-    margin-left: 18px;
-    font-weight: bold;
-}
-
-.globalAssignedFilter fieldset {
-    padding: 27px 0 27px 15px;
-}
-
-    .globalAssignedFilter fieldset table {
-        float: left;
-        margin: 15px 0 0 15px;
-    }
-
-    .globalAssignedFilter fieldset INPUT[type="checkbox"] {
-        float: left;
-        margin: 0;
-    }
-
-    .globalAssignedFilter fieldset table label {
-        clear: none;
-        float: left;
-        font-weight: bold;
-        margin: -10px 0 9px 10px;
-        color: #000000;
-        font-size: 14px;
-    }
-
-    .globalAssignedFilter fieldset fieldset.buttons {
-        float: left;
-        padding: 0;
-    }
-
-.globalAssignedFilter #ulAssignedTo {
-    float: left;
-    width: 88%;
-    margin: 0 0 0 24px;
-}
-
-.globalAssignedFilter .clarify span {
-    color: #ff0000;
-    font-size: 130%;
-}
-
-.globalAssignedFilter .clarify #spnDateTime {
-    color: #808080;
-    font-size: 100%;
-    font-style: normal;
-}
-
-
-.globalAssignedFilter p.clarify {
-    color: #808080;
-    font-size: 93%;
-    font-style: normal;
-    width: 90%;
-}
-
-.globalAssignedFilter .fieldset {
-    border-bottom: 1px dashed #000000;
-    margin-bottom: 0;
-    padding: 23px 0 25px 15px;
-}
-
-.globalAssignedFilter fieldset h2 {
-    margin-bottom: 10px;
-}
-
-.globalAssignedFilter #cmdModalSearchAddColumn1 {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #FF0000;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    text-decoration: underline;
-    text-transform: none;
-}
-
-.globalAssignedFilter input[type="button"], input[type="submit"], input.add[type="submit"], input.add[type="button"], .action, a.action, button, a.add, .button, a.button:link, a.button:visited {
-    border-radius: 0px;
-    padding: 5px 10px;
-}
-
-.globalAssignedFilter #msUsers_divModalSearchSelectColumnModal table {
-    margin: 15px 3px 0;
-}
-
-.globalAssignedFilter #msUsers_divModalSearchSelectColumnModal fieldset.buttons {
-    width: 100%;
-}
-
-.globalAssignedFilter .GlobalFilter-tab {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.globalAssignedFilter .AssignByUsers {
-    width: 425px;
-    float: right;
-    height: 477px;
-    padding: 6px 0 27px 34px;
-    margin: 10px 0 0 0;
-}
-
-    .globalAssignedFilter .AssignByUsers span {
-        color: #808080;
-        font-size: 93%;
-    }
-
-.globalAssignedFilter .AssignByGroups {
-    padding: 6px 0 27px 34px;
-    width: 423px;
-}
-
-    .globalAssignedFilter .AssignByGroups div {
-        width: auto;
-        float: left;
-    }
-
-    .globalAssignedFilter .AssignByGroups span {
-        color: #808080;
-        font-size: 14px;
-    }
-
-    .globalAssignedFilter.AssignByGroups fieldset {
-        color: #808080;
-        display: inline;
-        float: none;
-        margin: 0;
-        text-align: left;
-    }
-
-
-.globalAssignedFilter .btnNoPadding {
-    padding: 0;
-}
-
-.bodyUsers p.clarify {
-    color: #808080;
-    font-size: 93%;
-    font-style: normal;
-    width: 90%;
-}
-
-.bodyUsers div.content p {
-    line-height: 22px;
-}
-
-.bodyUsers .fieldset {
-    padding: 7px 0 10px 24px;
-}
-
-.bodyUsers label span {
-    color: #000000;
-    font-size: 16px;
-}
-
-.bodyUsers textarea, INPUT[type="text"], INPUT[type="textarea"], INPUT[type="password"], input[type="email"], input[type="date"], input[type="password"], input[type="tel"], .textbox {
-    border: 1px solid #CCCCCC;
-}
-
-.bodyUsers select {
-    border: 1px solid #CCCCCC;
-}
-
-
-.bodyUsers fieldset h2, h4 {
-    margin-bottom: 11px;
-}
-
-.bodyUsers input[type="button"], input[type="submit"], input.add[type="submit"], input.add[type="button"], .action, a.action, button, a.add, .button, a.button:link, a.button:visited {
-    border-radius: 0;
-    padding: 5px 10px;
-}
-
-.bodyUsers #tabs li a:link, #tabs li a:visited {
-    color: #6d6e70;
-}
-
-.globalAssignedFilter #tabs li.active,
-.bodyUsers #tabs li.active {
-    background-color: #404040;
-}
-
-.bodyUsers .GlobalFilter-tab {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.globalAssignedFilter .AssignByUsers div fieldset.buttons {
-    margin: -2px 4px 0 0;
-}
-
-.bodyUsers .FieldSetDeactivatedText {
-    padding: 19px 0 10px 12px;
-}
-
-.bodyUsers .lblDeactivatedText {
-    float: left;
-    width: 90%;
-    margin: 7px 0 0 13px;
-    color: #6d6e70;
-}
-
-
-.bodyUsers .FieldSetDeactivatedText P {
-    font-style: italic;
-    width: 107%;
-}
-
-.bodyUsers .fsStaffMemberInfo {
-    padding-bottom: 24px;
-}
-
-.bodyUsers .fsSecurityInfo {
-    padding-bottom: 24px;
-}
-
-.bodyUsers .pIndentedText {
-    margin: 7px 0 7px 169px;
-}
-
-.bodyUsers input.userCheckBox {
-    margin: 8px 23px 8px 10px;
-}
-
-.globalUserFilter .pFilterSetUser {
-    width: 98%;
-}
-
-.divCustomMessage {
-    width: 100%;
-    float: left;
-}
-
-.lblCustomMessage {
-    width: 90%;
-    margin-bottom: 10px;
-}
-
-
-.txtCustomOrder {
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-top: 0px;
-}
-
-
-.globalManageUsers fieldset.dropdownBoxes {
-    padding: 10px 0 10px 15px;
-}
-
-.globalManageUsers .dropdownBoxes div {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #DDDDDD;
-    padding: 6px;
-}
-
-    .globalManageUsers .dropdownBoxes div:nth-of-type(4) {
-        background: none;
-        padding: 8px 0;
-        border: 0px none;
-    }
-
-.globalManageUsers select#cboUserSearch {
-    width: 270px;
-}
-
-.globalManageUsers select#cboValues {
-    width: 350px;
-}
-
-.globalManageUsers select {
-    height: 27px;
-}
-
-.globalManageUsers .fsNoPaddingLeft {
-    padding-left: 0px;
-}
-
-.globalManageUsers .fsNoPaddingLeft {
-    padding-left: 0px;
-}
-
-.globalManageUsers .divCBOOpereations {
-    float: left;
-    margin-left: 10px;
-}
-
-    .globalManageUsers .divCBOOpereations select {
-        min-width: 140px;
-    }
-
-
-.globalManageUsers .divCBOSearchValues {
-    float: left;
-    margin-left: 10px;
-    min-width: 50px;
-}
-
-    .globalManageUsers .divCBOSearchValues select {
-        min-width: 330px;
-    }
-
-
-.globalManageUsers .divClearBtn {
-    float: left;
-    margin-left: 10px;
-}
-
-    .globalManageUsers .divClearBtn a {
-        margin-top: 0px;
-        padding-top: 0px;
-    }
-
-.globalManageUsers .cboSearchFilter {
-    min-width: 290px;
-}
-/*Sandip TEX16 – Global Filter Changes*/
-
-/*Global Filter Changes*/
-.StyleSearchCriteria {
-    margin-top: 0;
-}
-
-    .StyleSearchCriteria select {
-        width: 216px;
-        border: 1px solid #CCCCCC;
-    }
-
-    .StyleSearchCriteria p.clarify {
-        line-height: 22px;
-        color: #808080;
-        font-size: 93%;
-        font-style: normal;
-        width: 90%;
-        margin-left: 18px;
-    }
-
-    .StyleSearchCriteria p.clarify_margintop {
-        margin-top: 20px;
-    }
-
-    .StyleSearchCriteria h2 {
-        margin-bottom: 11px;
-        margin-left: 18px;
-    }
-
-    .StyleSearchCriteria table {
-        border: 0 !important;
-        margin-top: 40px;
-    }
-
-        .StyleSearchCriteria table tr {
-            background: transparent !important;
+        .PagingArrow {
+             margin-top:12px;
+        }
+        span.PageIndexNumber, span.PageIndexNumber:hover, .PageIndexNumberCurrent{
+            border:none !important;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
         }
 
-            .StyleSearchCriteria table tr td {
-                border-top: 0;
-                border-bottom: 0;
-            }
-
-    .StyleSearchCriteria .col-1-operation {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        width: 75px !important;
-    }
-
-    .StyleSearchCriteria .col-2-searchfield {
-        width: 215px !important;
-    }
-
-    .StyleSearchCriteria .col-3-searchoperator {
-        width: 216px !important;
-    }
-
-    .StyleSearchCriteria .col-4-searchvalue {
-        width: 276px !important;
-    }
-
-.col4-style div input {
-    font-family: 'Helvetica Neue 65';
-    font-size: 14px;
-    font-weight: normal;
-    width: 262px;
-}
-
-.StyleSearchCriteria .bold_text, .StyleSearchCriteria .bold_text b {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-#RemoveSearchLine, #RemoveSearchLine:hover {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url("../images/Fred-66.png");
-    background-size: 25px auto;
-}
-
-.StyleSearchCriteria .add {
-    margin-left: 80px !important;
-}
-
-.customAdd .add, .customAdd.StyleSearchCriteria .addHover {
-    margin-left: 115px !important;
-}
-
-
-
-.userJobAdd .add, .userJobAdd.StyleSearchCriteria .addHover {
-    margin-left: 128px !important;
-}
-
-.StyleSearchCriteria .addHover {
-    border-radius: 0;
-    padding: 7px 18px;
-    margin-left: 80px !important;
-}
-
-.radio_list, .radio_list input, .radio_list span, .radio_list p {
-    float: left;
-}
-
-.radio_list {
-    margin-bottom: 16px;
-    width: 100%;
-}
-
-    .radio_list span {
-        font-weight: bold;
-    }
-
-    .radio_list p {
-        margin-left: 18px !important;
-    }
-
-.globalFilterName input {
-    width: 330px;
-}
-
-.globalFilterName label span {
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 22px;
-    text-align: left;
-    text-transform: uppercase;
-    width: 190px;
-}
-
-b {
-    font-weight: bold;
-}
-
-.StyleFieldset .clarify .p-text {
-    color: inherit;
-    float: left;
-    font-size: inherit;
-    line-height: 19px;
-    width: 85%;
-}
-
-.StyleFieldset .clarify img {
-    cursor: pointer;
-    float: left;
-    height: 31px;
-}
-
-.StyleFieldset {
-    border-bottom: 1px dashed #000000;
-    margin: 0;
-    padding: 0 25px 25px 28px !important;
-}
-
-
-    .StyleFieldset p.clarify {
-        line-height: 22px;
-        margin-left: 5px;
-        color: #808080;
-        font-size: 93%;
-        font-style: normal;
-        width: 90%;
-        margin-top: 25px;
-    }
-
-    .StyleFieldset a.previewBtn {
-        background: url("../images/preview.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-        float: right !important;
-        height: 31px;
-        margin: 0 !important;
-        padding: 0 !important;
-        text-indent: -9999px;
-        width: 83px;
-    }
-
-
-
-    .StyleFieldset .clarify span {
-        color: #FF0000;
-        font-size: 130%;
-    }
-
-    .StyleFieldset .clarify strong {
-        color: #000000;
-        font-size: 130%;
-        font-weight: 500;
-    }
-
-    .StyleFieldset .clarify #spnDateTime {
-        color: #808080;
-        font-size: 100%;
-        font-style: normal;
-    }
-
-.StyleSearchCriteria div.DynaListGeneric TABLE TD,
-.StyleSearchCriteria div.DynaListGeneric TABLE TH {
-    border: 0 none;
-    font-size: 130%;
-    font-weight: bold !important;
-}
-
-.StyleSearchCriteria #tableGlobalFiltersFieldList td:nth-of-type(1) strong {
-    margin-right: 19px;
-}
-
-.StyleSearchCriteria strong {
-    font-weight: bold !important;
-}
-
-.StyleSearchCriteria h2 span {
-    color: #FF0000;
-}
-
-.StyleFieldset h2 {
-    margin-bottom: 11px;
-}
-
-.StyleSearchCriteria #divGlobalFilterSets select,
-.StyleSearchCriteria #divUserGroupGlobalFilterSets select {
-    width: 550px;
-}
-
-div.content .StyleFieldset p {
-    line-height: 22px;
-    color: #6D6E70;
-}
-
-div.content .StyleSearchCriteria p {
-    line-height: 22px;
-    margin-left: 18px;
-    color: #6D6E70;
-}
-
-.filterLinkButton {
-    color: #FF0000 !important;
-}
-
-.StyleSearchCriteria .divGlobalFields {
-    float: left;
-    margin-left: 107px;
-    padding-left: 40px;
-    width: 90%;
-}
-
-.greyInput1 {
-    float: left;
-    margin-left: 0;
-    margin-top: 0;
-    width: 370px;
-}
-
-    .greyInput1 input {
-        width: 95%;
-    }
-
-.greyInput2 {
-    border: 0 none;
-    float: left;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    margin-top: 0;
-    width: 149px;
-}
-
-    .greyInput2 input {
-        width: 83%;
-    }
-
-.StyleSearchCriteria label {
-    padding: 0;
-}
-
-.StyleSearchCriteria .linkSelect {
-    margin-left: 0;
-}
-
-.StyleSearchCriteria label span {
-    font-size: 16px;
-    margin-left: 14px;
-}
-
-fieldset.buttons.StyleSearchCriteria input {
-    float: right;
-}
-
-.andLink {
-    color: #000000;
-    float: left;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 12px;
-    position: relative;
-    width: 49px;
-    right: 775px;
-    top: 28px;
-    text-align: center;
-}
-
-.globalBtns input:nth-of-type(3) {
-    display: none;
-}
-
-.btnMarginFix {
-    margin: 0 !important;
-    height: 28px !important;
-    line-height: 28px !important;
-}
-
-.AssignByUsers fieldset.buttons a.add {
-    background: transparent;
-}
-
-.disabledcombo {
-    background-color: #E7E7E7;
-}
-/*Eoc Sandip TEX16 – Global Filter Changes*/
-
-
-/* Zendesk #10057 - Preview button is squashed (editLocation.aspx) */
-
-td.tallerRow {
-    padding: 10px 0 10px 0;
-}
-
-/* end Zendesk #10057 */
-
-@media print {
-    .no-print, .no-print * {
-        display: none !important;
-    }
-}
-/*IDEA 237 DEV 76*/
-.chkListPrintPackage label {
-    display: inline;
-}
-/*IDEA 237 DEV 76*/
-td.tallerRowStatus {
-    padding: 3px 0 3px 0;
-}
-
-.ui-widget-overlay {
-    background-color: #111;
-    opacity: .75;
-}
-
-/* Next/Previous Applicant Buttons */
-
-div#divPopUp {
-    box-shadow: 0px 0px 1px 2px #eee;
-    -webkit-box-shadow: 0px 0px 1px 2px #eee;
-    -moz-box-shadow: 0px 0px 1px 2px #eee;
-    background-repeat: no-repeat;
-    position: absolute;
-    display: none;
-}
-
-div#applicantButtons {
-    margin-top: 30px;
-    height: 45px;
-}
-
-    div#applicantButtons a.button {
-        color: #ffffff;
-        margin-top: -10px;
-        text-transform: uppercase;
-        margin: 0px;
-    }
-
-        div#applicantButtons a.button:hover {
-            color: #ffffff;
+/*TED-407 changes*/
+
+        fieldset.AcceptDeclineButtons {
+            background-image: none;
+            text-align: right;
+        }
+
+        fieldset#fsDeclineOffer select {
+            background-image: none;
+            background-color: white;
+            border: 1px solid #787878;
+            font-family: 'Helvetica Neue 65';
+            font-size: 14px;
+            outline: 2px solid #EFEFEF;
+            padding: 2px;
+            width: 80%;
+        }
+
+        fieldset.AcceptDeclineButtons input[type=button] {
+            background-color: #404040;
+            border-radius: 3px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: 'Helvetica Neue 55';
+            font-size: 14px;
+            margin: 3px 3px 3px 3px;
+            padding: 5px 10px 5px 10px;
             text-transform: uppercase;
+            border: 0;
         }
 
-    div#applicantButtons a {
-        text-transform: none;
-        background-color: none;
-        color: #333333;
-        border-bottom: dotted 1px #333333;
-        margin: 7px 10px;
-    }
 
-        div#applicantButtons a:hover {
-            text-transform: none;
-            background-color: none;
-            color: #666666;
-            border-bottom: none;
+        #hdrDeclineOffer,#hdrAcceptDecline {
+            color: #808080;
+            font-family: 'Atrament Medium';
+            font-size: 20px;
+            text-transform: uppercase;
+            background-color: transparent;
+            font-weight: normal;
         }
-
-.slidingDivNext, .slidingDivPrevious {
-    display: none;
-    float: right;
-    z-index: 9999;
-    margin-top: -50px;
-    margin-right: 128px;
-    padding: 5px 7px;
-    background-color: #fff;
-    color: #808080;
-    font-size: 12px;
-    border: 2px solid #cccccc;
-    font-style: italic;
-    width: 220px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.slidingDivNext {
-    margin-right: -122px;
-}
-
-    .slidingDivNext span, .slidingDivPrevious span {
-        font-size: 14px;
-        line-height: 21px;
-        color: #333;
-        font-style: normal;
-    }
-
-#divDeclinedOffer p {
-    margin: 25px 0;
-}
-
-.DisableCursor {
-    cursor: not-allowed !important;
-}
-
-#JobOfferStatus p {
-    margin-bottom: 10px;
-}
-
-#JobOfferStatus #JobOfferWrapper {
-    padding-bottom: 15px;
-    margin-left: 275px;
-}
-
-#email-select-users {
-    margin-top: 70px !important;
-    padding: 0 15px;
-}
-
-    #email-select-users a {
-        padding: 5px;
-        display: block;
-    }
-
-.email-recipients-control {
-    float: left;
-}
-
-#JobOffer_subJobOffer div {
-    margin: 10px 0;
-}
-
-/*To make all OptGroup bold and italic-To maintain consistency on all browsers*/
-select optgroup {
-    font-style: italic;
-    font-weight: bold;
-}
-
-div#QuickLinks {
-    float: right;
-    margin-top: 10px;
-}
-
-.mceLiteral {
-    float: left;
-    padding: 0 18px 0 0;
-    text-align: right;
-    width: 200px;
-}
-
-.mcetextarea {
-    width: 660px;
-    display: block;
-    float: left;
-    padding: 0 0 7px 0px;
-}
-
-.mce-btn > button:hover {
-    background-color: transparent;
-}
-
-div span em {
-    color: #BE1E2D;
-}
-
-.custom-select select {
-    max-width: 100%;
-    text-align: left;
-}
-
-.align-left {
-    text-align: left;
-}
-
-.backgroundcheckcomplete {
-    background-color: #DDD;
-    color: black;
-    border: 1px solid #666;
-}
