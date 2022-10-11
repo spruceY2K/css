@@ -1,6 +1,4 @@
 
-
-
 /* Hire Winter 2014 */
 
 /* --- Typeface Guide: ---*/
@@ -15,12 +13,6 @@
 
 /* --------------- TAGS ----------------- */
 
-/* --- Centers the district logo --- */
-
-div.districtLogo{
-display: flex;
-justify-content: center;
-}
 
 /* --- RESETS ALL HTML tags for better consistency across browsers --- */
 * {
