@@ -1229,3 +1229,376 @@ span.PageIndexNumber {
             background-color: transparent;
             font-weight: normal;
         }
+
+
+/*nfDialog - Styles*/
+.nfDialog_GreyOutMask
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: .50;
+}
+.nfDialog_Button
+{
+    display: inline-block;
+    border: solid 1px #000000;
+    font-family: Arial,Verdana;
+    border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    margin-top: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    background-color: #333;
+    width: 100px;
+    color: #FFF;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#dvnfDialog_Box_Yes
+{
+    float: left;
+    margin-left: 40px;
+}
+#dvnfDialog_Box_No
+{
+    float: right;
+    margin-right: 40px;
+}
+
+.nfDialog_Button:hover
+{
+    background-color: #AAA;
+    color: #000;
+}
+
+.nfDialog_DialogBox
+{
+    border: solid 2px #456;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    color: #000;
+    font-weight: bold;
+    font-size: 10pt;
+    width: 400px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    vertical-align: middle;
+    padding: 0px 10px 0px 10px;
+}
+.nfDialog_DialogBox_Tasks
+{
+    display: inline-block;
+    border: 0;
+    margin-bottom: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.nfDialog_DialogBox_Message
+{
+}
+/* User Search Style */
+.UserSearchDropDown { background-color: #FFF; font-size: 12px; border-width: 1px; border-style: solid; border-color: #000; padding: 4px; }
+.UserSearchDropDown a:link, .UserSearchDropDown a:visited, .UserSearchDropDown strong { display: block; padding: 1px 5px 1px 5px; color: #000; }
+.UserSearchDropDown a:hover { color: #FFF; background-color: #333; }
+
+.UserSearchDropDown { width: 285px; }
+.UserSearchDropDown span { font-weight: bold; }
+
+
+/* ITEM SEARCH STYLES */
+.ItemSearch { clear: both; position: absolute; border: 2px solid #111; padding: 0px; margin: 0px; background-color: #FFF; width: 300px; z-index: 1000; }
+
+.ItemSearch .closeSearch { float: right; padding: 2px; }
+.ItemSearch .closeSearch:hover { cursor: pointer; color: #111; }
+
+.ItemSearch .RemoveSelection { text-align: center; padding: 3px; background-color: #700; color: #FFF; font-weight: bold; border-bottom: 2px solid #000; }
+.ItemSearch .RemoveSelection:hover { background-color: #AEE3EE; color: #000; cursor: hand; cursor: pointer; }
+
+.ItemSearchResults { }
+.ItemSearchResults .navigate { border-top: 2px solid #333; height: 22px; background-color: #000; color: #FFF; padding-top: 5px;}
+.ItemSearchResults .navigate .next { float: right; margin-right: 5px; }
+.ItemSearchResults .navigate .next span { margin-left: 5px; padding: 2px; }
+.ItemSearchResults .navigate .next span:hover { cursor: hand; cursor: pointer; color: #111; background-color: #AEE3EE; }
+.ItemSearchResults .navigate .previous { float: left; margin-left: 5px; }
+.ItemSearchResults .navigate .previous span { margin-right: 5px; padding: 2px; }
+.ItemSearchResults .navigate .previous span:hover { cursor: hand; cursor: pointer; color: #111; background-color: #AEE3EE; }
+
+.ItemSearchText { }
+.ItemSearchText:hover { border: 2px solid #333; cursor: hand; cursor: pointer; background-color: #AEE3EE; }
+
+/* END - ITEM SEARCH STYLES */
+
+.RemoveSelectionImage { cursor: hand; cursor: pointer; margin-left: 30px; }
+
+
+label .hoverHighlight:hover { background-color: #AEE3EE; cursor: hand; cursor: pointer; }
+
+
+.ManagerList { width: 100%; }
+.DynaListGeneric { display: block; width: 100%; }
+
+
+/* BACKGROUND COLOR OF PAGINATION NAVIGATION CONTAINER - CONTAINS PAGE NUMBERS AND "NEXT PAGE" NAVIGATIONAL ICONS */
+.DynaListGeneric .navigate { vertical-align: middle; text-align: center; background-color: rgba(255,255,255,0.35); line-height: 35px; height: 35px; }
+.DynaListGeneric .navigate a:link, .DynaListGeneric .navigate a:visited { padding: 0px; margin: 0px; color: #FFF; text-decoration: none; }
+
+/* CURRENT PAGE NUMBER */
+.PageIndexNumberCurrent { z-index: 100; font-size: 15px; padding: 4px 5px; color: #000; background-color: #999999; border-radius: 3px; }
+
+/* OTHER AVAILABLE PAGE NUBMERS */
+span.PageIndexNumber {  padding: 4px 5px; font-size: 15px; text-decoration: none; cursor: pointer; border: 1px solid transparent;}
+
+span.PageIndexNumber a { text-decoration: none; color: #404040; }
+span.PageIndexNumber:hover { background-color: #D2D2D2; border: 1px solid transparent; }
+
+.PagingArrow { cursor: pointer; cursor: hand; display:inline-block; margin-top:5px !important; }
+.PagingArrow :hover { background-color: #AEE3EE; }
+
+
+.LoadingCover { filter: alpha(opacity=75); -moz-opacity: .75; opacity: .75; background-color: white; position: absolute; border: 1 green solid; color: #333; }
+.LoadingCover span { background-image: url(../Images/snake_transparent.gif); background-repeat: no-repeat; background-position: center left; padding: 0px 0px 0px 25px; font-size: larger; font-weight: bold; }
+
+.OnclickLink:hover { cursor: hand; cursor: pointer; }
+
+
+tr.rowSelect { background-color: #AEE3EE; color: #000; }
+
+/* CONTAINER OF INFORMATION RELATED TO # OF ITEMS SELECTED IN A DYNALIST - TYPICALLY BELOW PAGINATION */
+.DynaListGeneric .dynalistInfoBar { clear: both; color: #716558; text-align: center; vertical-align: middle; padding: 2px 5px; font-size: 14px; }
+.dynalistInfoBar a, .dynalistInfoBar a:link, .dynalistInfoBar a:visited { color: #716558; margin-left: 30px; text-decoration: underline;}
+.dynalistInfoBar span { color: #000; margin-left: 30px; }
+
+
+/* TOOLTIP STYLING */
+
+.dynalistHTML ol {
+    padding: 0 15px !important;
+}
+
+.dynalistHTML em {
+    color: inherit;
+}
+
+.dynalistHTML strong {
+    font-weight: bold !important;
+}
+
+.dynalistHTML ul {
+    padding: 0 15px !important;
+    list-style-type: disc !important;
+}
+
+/*EPI*/
+.tm_dot{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;	
+    padding: 3px;
+    text-align: center;
+}
+.tm_dot_na{
+    background-color: gray !important;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;	
+    padding: 3px;
+    text-align: center;
+}
+.tm_dot_timeOut{
+    padding: 5px 2px;
+    float: left;
+    font-size: 20px;
+    color: #6B6B6B;
+}
+
+.tm_dot .tm_number{
+    font-family: 'Arial Bold', 'Arial';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 12px;
+    color: #000000;
+}
+
+.tm_dot_na .tm_number{
+    font-family: 'Arial Bold', 'Arial';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.tm_panel_wrapper{
+	width: 0px; 
+    height: 0px;
+	float:left;
+    position: absolute;
+}
+
+.tm_panel{
+	border: solid 1px black; 
+	background-color: #eeeeee; 
+	width: 162px; 
+	position: relative;
+	left: -170px;
+	top: -210px;
+	height: 220px; 
+	padding: 10px;
+	float: left;
+}
+
+.tm_panel_principal{
+	border: solid 1px black; 
+	background-color: #eeeeee; 
+	width: 202px; 
+	position: relative;
+	left: -210px;
+	top: -180px;
+	height: 160px; 
+	padding: 10px;
+	float: left;
+}
+
+.tm_panel_support{
+	border: solid 1px black; 
+	background-color: #eeeeee; 
+	width: 202px; 
+	position: relative;
+	left: -210px;
+	top: -180px;
+	height: 160px; 
+	padding: 10px;
+	float: left;
+}
+
+.tm_panel_base, .tm_panel_hover_area{
+    width: 25px;
+    height: 25px;
+}
+
+.tm_item_first{
+	height: 85px; 
+	background-color: #dddddd; 
+	padding: 10px;
+}
+
+.tm_item_first_principal{
+	height: 55px; 
+	background-color: #dddddd; 
+	padding: 10px;
+}
+
+.tm_item_first_support{
+	height: 55px; 
+	background-color: #dddddd; 
+	padding: 10px;
+}
+
+.tm_item_last{
+	height: 25px; 
+	background-color: #dddddd; 
+	padding: 10px; 
+	margin-top: 10px;
+}
+
+.tm_item_number{
+	font-size: 16px; 
+	font-weight: bold; 
+	font-family: 'Arial Bold', 'Arial';
+}
+.tm_item_category{
+	padding-left: 10px; 
+	font-size: 14px; 
+	color: #333333; 
+	font-family: 'Arial Regular', 'Arial';
+}
+.tm_link_div{
+	float:right; 
+	margin-top: 10px;
+}
+.tm_link{
+	text-decoration: none; 
+	font-family: 'Arial Regular', 'Arial'; 
+	font-size: 12px;
+}
+.tm_panel_wrapper_blank{
+    width: 0px;
+    height: 0px;
+    display: none !important;
+}
+
+.dynalisttooltip div {
+    display: none;
+}
+
+.dynalisttooltip:hover div {
+    display: block;
+    position: absolute;
+    float: left;
+    padding: 5px;
+    background: -moz-linear-gradient(top, #ffffff 0%, #e4e5f0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e4e5f0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e4e5f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e5f0',GradientType=0 ); /* IE6-9 */
+    border: 0.1em solid #767676;
+    border-radius: 5px;
+    max-width: 100em;
+    margin-top: 50px;
+}
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+	
+.jqmWindow {
+    display: none;
+    
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    
+    margin-left: -300px;
+    width: 600px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
