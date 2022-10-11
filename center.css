@@ -6,6 +6,12 @@
 /* White Blue: EAF6FA		*/
 /* Red Orange: B83004	*/
 
+.districtLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 #tabs {
     display: block;
