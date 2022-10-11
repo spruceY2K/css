@@ -6,13 +6,6 @@
 /* White Blue: EAF6FA		*/
 /* Red Orange: B83004	*/
 
-.districtLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 #tabs {
     display: block;
     clear: both;
@@ -225,9 +218,12 @@ div.districtLogo {
     display: block;
     border: 0;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     padding: 0;
     height: auto;
-    clear: both;
+    clear: both;  
 }
 
 .dlPager {
